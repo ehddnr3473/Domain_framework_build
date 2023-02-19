@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6B195F6729A2CC4E00C0F257 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B195F6629A2CC4E00C0F257 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B195F9629A2CD4300C0F257 /* Domain.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B195F9529A2CD4300C0F257 /* Domain.xcframework */; };
 		6B195FAE29A2D03100C0F257 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195F9929A2D03100C0F257 /* Memory.swift */; };
 		6B195FAF29A2D03100C0F257 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195F9A29A2D03100C0F257 /* Schedule.swift */; };
 		6B195FB029A2D03100C0F257 /* TravelPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195F9B29A2D03100C0F257 /* TravelPlan.swift */; };
@@ -32,7 +31,6 @@
 /* Begin PBXFileReference section */
 		6B195F6329A2CC4E00C0F257 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B195F6629A2CC4E00C0F257 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
-		6B195F9529A2CD4300C0F257 /* Domain.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Domain.xcframework; path = build/Domain.xcframework; sourceTree = SOURCE_ROOT; };
 		6B195F9929A2D03100C0F257 /* Memory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		6B195F9A29A2D03100C0F257 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		6B195F9B29A2D03100C0F257 /* TravelPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelPlan.swift; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B195F9629A2CD4300C0F257 /* Domain.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				6B195F9729A2D02500C0F257 /* Sources */,
-				6B195F9529A2CD4300C0F257 /* Domain.xcframework */,
 				6B195F6629A2CC4E00C0F257 /* Domain.h */,
 			);
 			path = Domain;
