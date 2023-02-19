@@ -9,12 +9,48 @@
 /* Begin PBXBuildFile section */
 		6B195F6729A2CC4E00C0F257 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B195F6629A2CC4E00C0F257 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B195F9629A2CD4300C0F257 /* Domain.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B195F9529A2CD4300C0F257 /* Domain.xcframework */; };
+		6B195FAE29A2D03100C0F257 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195F9929A2D03100C0F257 /* Memory.swift */; };
+		6B195FAF29A2D03100C0F257 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195F9A29A2D03100C0F257 /* Schedule.swift */; };
+		6B195FB029A2D03100C0F257 /* TravelPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195F9B29A2D03100C0F257 /* TravelPlan.swift */; };
+		6B195FB129A2D03100C0F257 /* MemoryImageUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195F9D29A2D03100C0F257 /* MemoryImageUseCaseProvider.swift */; };
+		6B195FB229A2D03100C0F257 /* TravelPlanUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195F9E29A2D03100C0F257 /* TravelPlanUseCaseProvider.swift */; };
+		6B195FB329A2D03100C0F257 /* MemoryUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195F9F29A2D03100C0F257 /* MemoryUseCaseProvider.swift */; };
+		6B195FB429A2D03100C0F257 /* AbstractTravelPlanRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195FA129A2D03100C0F257 /* AbstractTravelPlanRepository.swift */; };
+		6B195FB529A2D03100C0F257 /* AbstractImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195FA229A2D03100C0F257 /* AbstractImageRepository.swift */; };
+		6B195FB629A2D03100C0F257 /* MemoryDeleteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195FA429A2D03100C0F257 /* MemoryDeleteUseCase.swift */; };
+		6B195FB729A2D03100C0F257 /* TravelPlanUploadUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195FA529A2D03100C0F257 /* TravelPlanUploadUseCase.swift */; };
+		6B195FB829A2D03100C0F257 /* TravelPlanSwapUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195FA629A2D03100C0F257 /* TravelPlanSwapUseCase.swift */; };
+		6B195FB929A2D03100C0F257 /* MemoryImageUploadUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195FA729A2D03100C0F257 /* MemoryImageUploadUseCase.swift */; };
+		6B195FBA29A2D03100C0F257 /* MemoryUploadUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195FA829A2D03100C0F257 /* MemoryUploadUseCase.swift */; };
+		6B195FBB29A2D03100C0F257 /* TravelPlanDeleteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195FA929A2D03100C0F257 /* TravelPlanDeleteUseCase.swift */; };
+		6B195FBC29A2D03100C0F257 /* TravelPlanReadUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195FAA29A2D03100C0F257 /* TravelPlanReadUseCase.swift */; };
+		6B195FBD29A2D03100C0F257 /* MemoryImageReadUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195FAB29A2D03100C0F257 /* MemoryImageReadUseCase.swift */; };
+		6B195FBE29A2D03100C0F257 /* MemoryImageDeleteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195FAC29A2D03100C0F257 /* MemoryImageDeleteUseCase.swift */; };
+		6B195FBF29A2D03100C0F257 /* MemoryReadUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B195FAD29A2D03100C0F257 /* MemoryReadUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B195F6329A2CC4E00C0F257 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B195F6629A2CC4E00C0F257 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		6B195F9529A2CD4300C0F257 /* Domain.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Domain.xcframework; path = build/Domain.xcframework; sourceTree = SOURCE_ROOT; };
+		6B195F9929A2D03100C0F257 /* Memory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		6B195F9A29A2D03100C0F257 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		6B195F9B29A2D03100C0F257 /* TravelPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelPlan.swift; sourceTree = "<group>"; };
+		6B195F9D29A2D03100C0F257 /* MemoryImageUseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryImageUseCaseProvider.swift; sourceTree = "<group>"; };
+		6B195F9E29A2D03100C0F257 /* TravelPlanUseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelPlanUseCaseProvider.swift; sourceTree = "<group>"; };
+		6B195F9F29A2D03100C0F257 /* MemoryUseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryUseCaseProvider.swift; sourceTree = "<group>"; };
+		6B195FA129A2D03100C0F257 /* AbstractTravelPlanRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractTravelPlanRepository.swift; sourceTree = "<group>"; };
+		6B195FA229A2D03100C0F257 /* AbstractImageRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractImageRepository.swift; sourceTree = "<group>"; };
+		6B195FA429A2D03100C0F257 /* MemoryDeleteUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryDeleteUseCase.swift; sourceTree = "<group>"; };
+		6B195FA529A2D03100C0F257 /* TravelPlanUploadUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelPlanUploadUseCase.swift; sourceTree = "<group>"; };
+		6B195FA629A2D03100C0F257 /* TravelPlanSwapUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelPlanSwapUseCase.swift; sourceTree = "<group>"; };
+		6B195FA729A2D03100C0F257 /* MemoryImageUploadUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryImageUploadUseCase.swift; sourceTree = "<group>"; };
+		6B195FA829A2D03100C0F257 /* MemoryUploadUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryUploadUseCase.swift; sourceTree = "<group>"; };
+		6B195FA929A2D03100C0F257 /* TravelPlanDeleteUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelPlanDeleteUseCase.swift; sourceTree = "<group>"; };
+		6B195FAA29A2D03100C0F257 /* TravelPlanReadUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelPlanReadUseCase.swift; sourceTree = "<group>"; };
+		6B195FAB29A2D03100C0F257 /* MemoryImageReadUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryImageReadUseCase.swift; sourceTree = "<group>"; };
+		6B195FAC29A2D03100C0F257 /* MemoryImageDeleteUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryImageDeleteUseCase.swift; sourceTree = "<group>"; };
+		6B195FAD29A2D03100C0F257 /* MemoryReadUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryReadUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,10 +84,68 @@
 		6B195F6529A2CC4E00C0F257 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				6B195F9729A2D02500C0F257 /* Sources */,
 				6B195F9529A2CD4300C0F257 /* Domain.xcframework */,
 				6B195F6629A2CC4E00C0F257 /* Domain.h */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		6B195F9729A2D02500C0F257 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				6B195F9829A2D03100C0F257 /* Entries */,
+				6B195FA029A2D03100C0F257 /* Repository interface */,
+				6B195F9C29A2D03100C0F257 /* UseCaseProvider */,
+				6B195FA329A2D03100C0F257 /* UseCases */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		6B195F9829A2D03100C0F257 /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				6B195F9929A2D03100C0F257 /* Memory.swift */,
+				6B195F9A29A2D03100C0F257 /* Schedule.swift */,
+				6B195F9B29A2D03100C0F257 /* TravelPlan.swift */,
+			);
+			path = Entries;
+			sourceTree = "<group>";
+		};
+		6B195F9C29A2D03100C0F257 /* UseCaseProvider */ = {
+			isa = PBXGroup;
+			children = (
+				6B195F9D29A2D03100C0F257 /* MemoryImageUseCaseProvider.swift */,
+				6B195F9E29A2D03100C0F257 /* TravelPlanUseCaseProvider.swift */,
+				6B195F9F29A2D03100C0F257 /* MemoryUseCaseProvider.swift */,
+			);
+			path = UseCaseProvider;
+			sourceTree = "<group>";
+		};
+		6B195FA029A2D03100C0F257 /* Repository interface */ = {
+			isa = PBXGroup;
+			children = (
+				6B195FA129A2D03100C0F257 /* AbstractTravelPlanRepository.swift */,
+				6B195FA229A2D03100C0F257 /* AbstractImageRepository.swift */,
+			);
+			path = "Repository interface";
+			sourceTree = "<group>";
+		};
+		6B195FA329A2D03100C0F257 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				6B195FA429A2D03100C0F257 /* MemoryDeleteUseCase.swift */,
+				6B195FA529A2D03100C0F257 /* TravelPlanUploadUseCase.swift */,
+				6B195FA629A2D03100C0F257 /* TravelPlanSwapUseCase.swift */,
+				6B195FA729A2D03100C0F257 /* MemoryImageUploadUseCase.swift */,
+				6B195FA829A2D03100C0F257 /* MemoryUploadUseCase.swift */,
+				6B195FA929A2D03100C0F257 /* TravelPlanDeleteUseCase.swift */,
+				6B195FAA29A2D03100C0F257 /* TravelPlanReadUseCase.swift */,
+				6B195FAB29A2D03100C0F257 /* MemoryImageReadUseCase.swift */,
+				6B195FAC29A2D03100C0F257 /* MemoryImageDeleteUseCase.swift */,
+				6B195FAD29A2D03100C0F257 /* MemoryReadUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +227,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B195FAF29A2D03100C0F257 /* Schedule.swift in Sources */,
+				6B195FB429A2D03100C0F257 /* AbstractTravelPlanRepository.swift in Sources */,
+				6B195FB829A2D03100C0F257 /* TravelPlanSwapUseCase.swift in Sources */,
+				6B195FBE29A2D03100C0F257 /* MemoryImageDeleteUseCase.swift in Sources */,
+				6B195FB929A2D03100C0F257 /* MemoryImageUploadUseCase.swift in Sources */,
+				6B195FBA29A2D03100C0F257 /* MemoryUploadUseCase.swift in Sources */,
+				6B195FBC29A2D03100C0F257 /* TravelPlanReadUseCase.swift in Sources */,
+				6B195FB629A2D03100C0F257 /* MemoryDeleteUseCase.swift in Sources */,
+				6B195FB329A2D03100C0F257 /* MemoryUseCaseProvider.swift in Sources */,
+				6B195FBD29A2D03100C0F257 /* MemoryImageReadUseCase.swift in Sources */,
+				6B195FBF29A2D03100C0F257 /* MemoryReadUseCase.swift in Sources */,
+				6B195FB029A2D03100C0F257 /* TravelPlan.swift in Sources */,
+				6B195FB129A2D03100C0F257 /* MemoryImageUseCaseProvider.swift in Sources */,
+				6B195FAE29A2D03100C0F257 /* Memory.swift in Sources */,
+				6B195FB229A2D03100C0F257 /* TravelPlanUseCaseProvider.swift in Sources */,
+				6B195FBB29A2D03100C0F257 /* TravelPlanDeleteUseCase.swift in Sources */,
+				6B195FB529A2D03100C0F257 /* AbstractImageRepository.swift in Sources */,
+				6B195FB729A2D03100C0F257 /* TravelPlanUploadUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
