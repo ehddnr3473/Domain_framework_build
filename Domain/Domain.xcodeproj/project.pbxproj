@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		6B195F6729A2CC4E00C0F257 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B195F6629A2CC4E00C0F257 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B195F9629A2CD4300C0F257 /* Domain.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B195F9529A2CD4300C0F257 /* Domain.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B195F6329A2CC4E00C0F257 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B195F6629A2CC4E00C0F257 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
+		6B195F9529A2CD4300C0F257 /* Domain.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Domain.xcframework; path = build/Domain.xcframework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,6 +22,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B195F9629A2CD4300C0F257 /* Domain.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +48,7 @@
 		6B195F6529A2CC4E00C0F257 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				6B195F9529A2CD4300C0F257 /* Domain.xcframework */,
 				6B195F6629A2CC4E00C0F257 /* Domain.h */,
 			);
 			path = Domain;

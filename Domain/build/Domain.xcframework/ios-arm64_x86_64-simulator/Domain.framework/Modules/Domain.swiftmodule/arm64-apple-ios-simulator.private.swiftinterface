@@ -1,0 +1,149 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios16.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Domain
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CoreLocation
+@_exported import Domain
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+public struct Memory {
+  public let title: Swift.String
+  public let index: Swift.Int
+  public let uploadDate: Foundation.Date
+  public init(title: Swift.String, index: Swift.Int, uploadDate: Foundation.Date)
+}
+public protocol MemoryImageUseCaseProvider : AnyObject {
+  func provideMemoryImageUploadUseCase() -> Domain.MemoryImageUploadUseCase
+  func provideMemoryImageReadUseCase() -> Domain.MemoryImageReadUseCase
+  func provideMemoryImageDeleteUseCase() -> Domain.MemoryImageDeleteUseCase
+}
+final public class ConcreteMemoryImageUseCaseProvider<Repository> : Domain.MemoryImageUseCaseProvider where Repository : Domain.AbstractImageRepository {
+  public init(_ repository: Repository)
+  final public func provideMemoryImageUploadUseCase() -> Domain.MemoryImageUploadUseCase
+  final public func provideMemoryImageReadUseCase() -> Domain.MemoryImageReadUseCase
+  final public func provideMemoryImageDeleteUseCase() -> Domain.MemoryImageDeleteUseCase
+  @objc deinit
+}
+public struct TravelPlanSwapBox {
+  public let source: Swift.Int
+  public let destination: Swift.Int
+  public let sourceTravelPlan: Domain.TravelPlan
+  public let destinationTravelPlan: Domain.TravelPlan
+  public init(source: Swift.Int, destination: Swift.Int, sourceTravelPlan: Domain.TravelPlan, destinationTravelPlan: Domain.TravelPlan)
+}
+public protocol TravelPlanSwapUseCase {
+  #if compiler(>=5.3) && $AsyncAwait
+  func execute(_ travelPlanSwapBox: Domain.TravelPlanSwapBox) async throws
+  #endif
+}
+public protocol MemoryImageDeleteUseCase {
+  #if compiler(>=5.3) && $AsyncAwait
+  func execute(at index: Swift.Int) async throws
+  #endif
+}
+public protocol MemoryImageUploadUseCase {
+  #if compiler(>=5.3) && $AsyncAwait
+  func execute(at index: Swift.Int, _ image: UIKit.UIImage) async throws
+  #endif
+}
+public protocol MemoryUploadUseCase {
+  #if compiler(>=5.3) && $AsyncAwait
+  func execute(at index: Swift.Int, _ memory: Domain.Memory) async throws
+  #endif
+}
+public protocol TravelPlanReadUseCase {
+  #if compiler(>=5.3) && $AsyncAwait
+  func execute() async throws -> [Domain.TravelPlan]
+  #endif
+}
+public protocol MemoryDeleteUseCase {
+  #if compiler(>=5.3) && $AsyncAwait
+  func execute(at index: Swift.Int) async throws
+  #endif
+}
+public protocol MemoryUseCaseProvider {
+  func provideMemoryUploadUseCase() -> Domain.MemoryUploadUseCase
+  func provideMemoryReadUseCase() -> Domain.MemoryReadUseCase
+  func provideMemoryDeleteUseCase() -> Domain.MemoryDeleteUseCase
+}
+public struct ConcreteMemoryUseCaseProvider<Repository> : Domain.MemoryUseCaseProvider where Repository : Domain.AbstractRepository, Repository.T == Domain.Memory {
+  public init(_ repository: Repository)
+  public func provideMemoryUploadUseCase() -> Domain.MemoryUploadUseCase
+  public func provideMemoryReadUseCase() -> Domain.MemoryReadUseCase
+  public func provideMemoryDeleteUseCase() -> Domain.MemoryDeleteUseCase
+}
+public protocol MemoryImageReadUseCase {
+  func execute(at index: Swift.Int, completion: @escaping ((Swift.Result<UIKit.UIImage, Swift.Error>) -> Swift.Void))
+}
+public protocol MemoryReadUseCase {
+  #if compiler(>=5.3) && $AsyncAwait
+  func execute() async throws -> [Domain.Memory]
+  #endif
+}
+public protocol AbstractRepository {
+  associatedtype T
+  #if compiler(>=5.3) && $AsyncAwait
+  func upload(at index: Swift.Int, entity: Self.T) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func read() async throws -> [Self.T]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func delete(at index: Swift.Int) async throws
+  #endif
+}
+public struct TravelPlan {
+  public let title: Swift.String
+  public let description: Swift.String
+  public let schedules: [Domain.Schedule]
+  public init(title: Swift.String, description: Swift.String, schedules: [Domain.Schedule])
+}
+extension Domain.TravelPlan : Swift.Equatable {
+  public static func == (lhs: Domain.TravelPlan, rhs: Domain.TravelPlan) -> Swift.Bool
+}
+public protocol TravelPlanUseCaseProvider {
+  func provideTravelPlanUploadUseCase() -> Domain.TravelPlanUploadUseCase
+  func provideTravelPlanReadUseCase() -> Domain.TravelPlanReadUseCase
+  func provideTravelPlanDeleteUseCase() -> Domain.TravelPlanDeleteUseCase
+  func provideTravelPlanSwapUseCase() -> Domain.TravelPlanSwapUseCase
+}
+public struct ConcreteTravelPlanUseCaseProvider<Repository> : Domain.TravelPlanUseCaseProvider where Repository : Domain.AbstractRepository, Repository.T == Domain.TravelPlan {
+  public init(_ repository: Repository)
+  public func provideTravelPlanUploadUseCase() -> Domain.TravelPlanUploadUseCase
+  public func provideTravelPlanReadUseCase() -> Domain.TravelPlanReadUseCase
+  public func provideTravelPlanDeleteUseCase() -> Domain.TravelPlanDeleteUseCase
+  public func provideTravelPlanSwapUseCase() -> Domain.TravelPlanSwapUseCase
+}
+public struct Schedule {
+  public let title: Swift.String
+  public let description: Swift.String
+  public let coordinate: CoreLocation.CLLocationCoordinate2D
+  public let fromDate: Foundation.Date?
+  public let toDate: Foundation.Date?
+  public init(title: Swift.String, description: Swift.String, coordinate: CoreLocation.CLLocationCoordinate2D, fromDate: Foundation.Date?, toDate: Foundation.Date?)
+}
+extension Domain.Schedule : Swift.Equatable {
+  public static func == (lhs: Domain.Schedule, rhs: Domain.Schedule) -> Swift.Bool
+}
+public protocol TravelPlanDeleteUseCase {
+  #if compiler(>=5.3) && $AsyncAwait
+  func execute(at index: Swift.Int) async throws
+  #endif
+}
+public protocol AbstractImageRepository : AnyObject {
+  #if compiler(>=5.3) && $AsyncAwait
+  func upload(at index: Swift.Int, _ image: UIKit.UIImage) async throws
+  #endif
+  func read(at index: Swift.Int, _ completion: @escaping ((Swift.Result<UIKit.UIImage, Swift.Error>) -> Swift.Void))
+  #if compiler(>=5.3) && $AsyncAwait
+  func delete(at index: Swift.Int) async throws
+  #endif
+}
+public protocol TravelPlanUploadUseCase {
+  #if compiler(>=5.3) && $AsyncAwait
+  func execute(at index: Swift.Int, travelPlan: Domain.TravelPlan) async throws
+  #endif
+}
