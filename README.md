@@ -1,7 +1,10 @@
 # Domain_framework_build
 
 ## 1. 프레임워크 프로젝트 생성
+아래의 파일명은 쓰임에 따라 framework 및 library로 변경해서 사용
 
+
+<br></br>
 ## 2. Archiving
 ### Archive for iOS
 
@@ -10,7 +13,7 @@ xcodebuild archive \
 -scheme FrameworkName \
 -configuration Release \
 -destination 'generic/platform=iOS' \
--archivePath './build/FrameworkName.fromework-iphoneos.xcarchive' \
+-archivePath './build/FrameworkName.framework-iphoneos.xcarchive' \
 SKIP_INSTALL=NO \
 BUILD_LIBRARY_FOR_DISTRIBUTION=YES
 ```
@@ -33,7 +36,7 @@ BUILD_LIBRARY_FOR_DISTRIBUTION=YES
 ## 3. xcframework 생성
 
 ```bash
-xcodebulid -create-xcframework \
+xcodebuild -create-xcframework \
 -framework './build/FrameworkName.framework-iphoneos.xcarchive/Products/Library/Frameworks/FrameworkName.framework' \
 -framework './build/FrameworkName.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/FrameworkName.framework' \
 -output './build/FrameworkName.xcframework'
