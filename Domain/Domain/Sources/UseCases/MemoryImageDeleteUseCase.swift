@@ -11,10 +11,10 @@ public protocol MemoryImageDeleteUseCase {
     func execute(at index: Int) async throws
 }
 
-struct ConcreteMemoryImageDeleteUseCase<Repository: AbstractImageRepository>: MemoryImageDeleteUseCase {
-    private let repository: Repository
+struct ConcreteMemoryImageDeleteUseCase: MemoryImageDeleteUseCase {
+    private let repository: AbstractImageRepository
     
-    init(_ repository: Repository) {
+    init(_ repository: AbstractImageRepository) {
         self.repository = repository
     }
     

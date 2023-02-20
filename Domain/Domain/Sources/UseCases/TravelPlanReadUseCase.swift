@@ -11,10 +11,10 @@ public protocol TravelPlanReadUseCase {
     func execute() async throws -> [TravelPlan]
 }
 
-struct ConcreteTravelPlanReadUseCase<Repository: AbstractRepository>: TravelPlanReadUseCase where Repository.T == TravelPlan {
-    private let repository: Repository
+struct ConcreteTravelPlanReadUseCase: TravelPlanReadUseCase {
+    private let repository: AbstractTravelPlanRepository
     
-    init(_ repository: Repository) {
+    init(_ repository: AbstractTravelPlanRepository) {
         self.repository = repository
     }
     

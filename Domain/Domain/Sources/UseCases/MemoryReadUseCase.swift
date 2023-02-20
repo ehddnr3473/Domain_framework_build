@@ -11,10 +11,10 @@ public protocol MemoryReadUseCase {
     func execute() async throws -> [Memory]
 }
 
-struct ConcreteMemoryReadUseCase<Repository: AbstractRepository>: MemoryReadUseCase where Repository.T == Memory {
-    private let repository: Repository
+struct ConcreteMemoryReadUseCase: MemoryReadUseCase {
+    private let repository: AbstractMemoryRepository
     
-    init(_ repository: Repository) {
+    init(_ repository: AbstractMemoryRepository) {
         self.repository = repository
     }
     

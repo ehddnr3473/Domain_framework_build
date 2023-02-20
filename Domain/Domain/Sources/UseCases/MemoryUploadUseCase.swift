@@ -11,10 +11,10 @@ public protocol MemoryUploadUseCase {
     func execute(at index: Int, _ memory: Memory) async throws
 }
 
-struct ConcreteMemoryUploadUseCase<Repository: AbstractRepository>: MemoryUploadUseCase where Repository.T == Memory {
-    private let repository: Repository
+struct ConcreteMemoryUploadUseCase: MemoryUploadUseCase {
+    private let repository: AbstractMemoryRepository
     
-    init(_ repository: Repository) {
+    init(_ repository: AbstractMemoryRepository) {
         self.repository = repository
     }
     

@@ -12,10 +12,10 @@ public protocol MemoryImageUploadUseCase {
     func execute(at index: Int, _ image: UIImage) async throws
 }
 
-struct ConcreteMemoryImageUploadUseCase<Repository: AbstractImageRepository>: MemoryImageUploadUseCase {
-    private let repository: Repository
+struct ConcreteMemoryImageUploadUseCase: MemoryImageUploadUseCase {
+    private let repository: AbstractImageRepository
     
-    init(_ repository: Repository) {
+    init(_ repository: AbstractImageRepository) {
         self.repository = repository
     }
     

@@ -12,10 +12,10 @@ public protocol MemoryImageReadUseCase {
     func execute(at index: Int, completion: @escaping ((Result<UIImage, Error>) -> Void))
 }
 
-struct ConcreteMemoryImageReadUseCase<Repository: AbstractImageRepository>: MemoryImageReadUseCase {
-    private let repository: Repository
+struct ConcreteMemoryImageReadUseCase: MemoryImageReadUseCase {
+    private let repository: AbstractImageRepository
     
-    init(_ repository: Repository) {
+    init(_ repository: AbstractImageRepository) {
         self.repository = repository
     }
     

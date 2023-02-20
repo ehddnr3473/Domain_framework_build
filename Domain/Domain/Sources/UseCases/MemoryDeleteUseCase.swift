@@ -11,10 +11,10 @@ public protocol MemoryDeleteUseCase {
     func execute(at index: Int) async throws
 }
 
-struct ConcreteMemoryDeleteUseCase<Repository: AbstractRepository>: MemoryDeleteUseCase where Repository.T == Memory {
-    private let repository: Repository
+struct ConcreteMemoryDeleteUseCase: MemoryDeleteUseCase {
+    private let repository: AbstractMemoryRepository
     
-    init(_ repository: Repository) {
+    init(_ repository: AbstractMemoryRepository) {
         self.repository = repository
     }
     

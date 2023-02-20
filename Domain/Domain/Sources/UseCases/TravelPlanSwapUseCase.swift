@@ -28,10 +28,10 @@ public protocol TravelPlanSwapUseCase {
     func execute(_ travelPlanSwapBox: TravelPlanSwapBox) async throws
 }
 
-struct ConcreateTravelPlanSwapUseCase<Repository: AbstractRepository>: TravelPlanSwapUseCase where Repository.T == TravelPlan {
-    private let repository: Repository
+struct ConcreateTravelPlanSwapUseCase: TravelPlanSwapUseCase {
+    private let repository: AbstractTravelPlanRepository
     
-    init(_ repository: Repository) {
+    init(_ repository: AbstractTravelPlanRepository) {
         self.repository = repository
     }
     
