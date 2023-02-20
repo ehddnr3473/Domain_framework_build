@@ -7,9 +7,8 @@
 
 import Foundation
 
-public protocol AbstractRepository {
-    associatedtype T
-    func upload(at index: Int, entity: T) async throws
-    func read() async throws -> [T]
+public protocol AbstractTravelPlanRepository {
+    func upload(at index: Int, entity: TravelPlan) async throws
+    func read() async throws -> [TravelPlan]
     func delete(at index: Int) async throws
 }
