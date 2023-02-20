@@ -1,0 +1,14 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/kimdonguk/Desktop/Domain_framework_build/Domain/build/Release-iphoneos/Domain.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/kimdonguk/Desktop/Domain_framework_build/Domain/build/iphoneos/objroot/Domain.build/Release-iphoneos/Domain.build/unextended-module.modulemap",
+    }]
+  }]
+}
