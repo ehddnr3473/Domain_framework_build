@@ -13,10 +13,10 @@ public protocol MemoryImageUseCaseProvider: AnyObject {
     func provideMemoryImageDeleteUseCase() -> MemoryImageDeleteUseCase
 }
 
-public final class ConcreteMemoryImageUseCaseProvider<Repository: AbstractImageRepository>: MemoryImageUseCaseProvider {
-    private let repository: Repository
+public final class ConcreteMemoryImageUseCaseProvider: MemoryImageUseCaseProvider {
+    private let repository: AbstractImageRepository
     
-    public init(_ repository: Repository) {
+    public init(_ repository: AbstractImageRepository) {
         self.repository = repository
     }
     

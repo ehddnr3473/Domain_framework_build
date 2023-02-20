@@ -13,10 +13,10 @@ public protocol MemoryUseCaseProvider {
     func provideMemoryDeleteUseCase() -> MemoryDeleteUseCase
 }
 
-public struct ConcreteMemoryUseCaseProvider<Repository: AbstractRepository>: MemoryUseCaseProvider where Repository.T == Memory {
-    private let repository: Repository
+public struct ConcreteMemoryUseCaseProvider: MemoryUseCaseProvider {
+    private let repository: AbstractMemoryRepository
     
-    public init(_ repository: Repository) {
+    public init(_ repository: AbstractMemoryRepository) {
         self.repository = repository
     }
     

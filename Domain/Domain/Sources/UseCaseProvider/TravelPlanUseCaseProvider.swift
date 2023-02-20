@@ -14,26 +14,26 @@ public protocol TravelPlanUseCaseProvider {
     func provideTravelPlanSwapUseCase() -> TravelPlanSwapUseCase
 }
 
-public struct ConcreteTravelPlanUseCaseProvider<Repository: AbstractRepository>: TravelPlanUseCaseProvider where Repository.T == TravelPlan {
-    private let repository: Repository
+public struct ConcreteTravelPlanUseCaseProvider: TravelPlanUseCaseProvider {
+    private let repository: AbstractTravelPlanRepository
     
-    public init(_ repository: Repository) {
+    public init(_ repository: AbstractTravelPlanRepository) {
         self.repository = repository
     }
     
     public func provideTravelPlanUploadUseCase() -> TravelPlanUploadUseCase {
-        ConcreteTravelPlanUploadUseCase<Repository>(repository)
+        ConcreteTravelPlanUploadUseCase(repository)
     }
     
     public func provideTravelPlanReadUseCase() -> TravelPlanReadUseCase {
-        ConcreteTravelPlanReadUseCase<Repository>(repository)
+        ConcreteTravelPlanReadUseCase(repository)
     }
     
     public func provideTravelPlanDeleteUseCase() -> TravelPlanDeleteUseCase {
-        ConcreteTravelPlanDeleteUseCase<Repository>(repository)
+        ConcreteTravelPlanDeleteUseCase(repository)
     }
     
     public func provideTravelPlanSwapUseCase() -> TravelPlanSwapUseCase {
-        ConcreateTravelPlanSwapUseCase<Repository>(repository)
+        ConcreateTravelPlanSwapUseCase(repository)
     }
 }
