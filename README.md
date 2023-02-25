@@ -54,7 +54,7 @@ xcodebuild -create-xcframework \
 
 ```bash
 xcodebuild clean build \
--scheme Domain \
+-scheme FrameworkName \
 -sdk iphoneos \
 -destination 'generic/platform=iOS' \
 -configuration Release \
@@ -72,7 +72,7 @@ BUILD_LIBRARY_FOR_DISTRIBUTION=YES
 
 ```bash
 xcodebuild clean build \
--scheme Domain \
+-scheme FrameworkName \
 -sdk iphonesimulator \
 -destination 'generic/platform=iOS Simulator' \
 -configuration Release \
