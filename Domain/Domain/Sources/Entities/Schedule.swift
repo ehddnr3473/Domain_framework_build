@@ -8,7 +8,6 @@
 import Foundation
 import CoreLocation
 
-/// TravelPlan의 하위 데이터
 public struct Schedule {
     public let title: String
     public let description: String
