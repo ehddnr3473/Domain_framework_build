@@ -1,5 +1,5 @@
 //
-//  MemoryImageDeleteUseCase.swift
+//  DeleteImageUseCase.swift
 //  Domain
 //
 //  Created by 김동욱 on 2023/02/18.
@@ -7,14 +7,14 @@
 
 import Foundation
 
-public protocol MemoryImageDeleteUseCase {
+public protocol DeleteImageUseCase {
     func execute(at index: Int) async throws
 }
 
-struct ConcreteMemoryImageDeleteUseCase: MemoryImageDeleteUseCase {
-    private let repository: AbstractImageRepository
+struct DefaultDeleteImageUseCase: DeleteImageUseCase {
+    private let repository: ImagesRepository
     
-    init(_ repository: AbstractImageRepository) {
+    init(_ repository: ImagesRepository) {
         self.repository = repository
     }
     

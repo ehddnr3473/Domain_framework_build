@@ -1,5 +1,5 @@
 //
-//  MemoryDeleteUseCase.swift
+//  DeletePlanUseCase.swift
 //  Domain
 //
 //  Created by 김동욱 on 2023/02/18.
@@ -7,14 +7,14 @@
 
 import Foundation
 
-public protocol MemoryDeleteUseCase {
+public protocol DeletePlanUseCase {
     func execute(at index: Int) async throws
 }
 
-struct ConcreteMemoryDeleteUseCase: MemoryDeleteUseCase {
-    private let repository: AbstractMemoryRepository
+struct DefaultDeletePlanUseCase: DeletePlanUseCase {
+    private let repository: PlansRepository
     
-    init(_ repository: AbstractMemoryRepository) {
+    init(_ repository: PlansRepository) {
         self.repository = repository
     }
     

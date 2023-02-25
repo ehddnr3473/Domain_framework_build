@@ -1,5 +1,5 @@
 //
-//  MemoryImageReadUseCase.swift
+//  ReadImageUseCase.swift
 //  Domain
 //
 //  Created by 김동욱 on 2023/02/18.
@@ -8,14 +8,14 @@
 import Foundation
 import UIKit
 
-public protocol MemoryImageReadUseCase {
+public protocol ReadImageUseCase {
     func execute(at index: Int, completion: @escaping ((Result<UIImage, Error>) -> Void))
 }
 
-struct ConcreteMemoryImageReadUseCase: MemoryImageReadUseCase {
-    private let repository: AbstractImageRepository
+struct DefaultReadImageUseCase: ReadImageUseCase {
+    private let repository: ImagesRepository
     
-    init(_ repository: AbstractImageRepository) {
+    init(_ repository: ImagesRepository) {
         self.repository = repository
     }
     
