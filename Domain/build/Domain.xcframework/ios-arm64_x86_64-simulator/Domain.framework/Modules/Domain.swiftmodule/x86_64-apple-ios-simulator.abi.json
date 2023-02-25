@@ -386,8 +386,7 @@
         "mangledName": "$s6Domain8ScheduleV",
         "moduleName": "Domain",
         "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
+          "AccessControl"
         ],
         "conformances": [
           {
@@ -411,13 +410,13 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "AbstractTravelPlanRepository",
-        "printedName": "AbstractTravelPlanRepository",
+        "name": "PlansRepository",
+        "printedName": "PlansRepository",
         "children": [
           {
             "kind": "Function",
             "name": "upload",
-            "printedName": "upload(at:entity:)",
+            "printedName": "upload(at:plan:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -432,17 +431,17 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlan",
-                "printedName": "Domain.TravelPlan",
-                "usr": "s:6Domain10TravelPlanV"
+                "name": "Plan",
+                "printedName": "Domain.Plan",
+                "usr": "s:6Domain4PlanV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain28AbstractTravelPlanRepositoryP6upload2at6entityySi_AA0cD0VtYaKF",
-            "mangledName": "$s6Domain28AbstractTravelPlanRepositoryP6upload2at6entityySi_AA0cD0VtYaKF",
+            "usr": "s:6Domain15PlansRepositoryP6upload2at4planySi_AA4PlanVtYaKF",
+            "mangledName": "$s6Domain15PlansRepositoryP6upload2at4planySi_AA4PlanVtYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.AbstractTravelPlanRepository>",
-            "sugared_genericSig": "<Self where Self : Domain.AbstractTravelPlanRepository>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.PlansRepository>",
+            "sugared_genericSig": "<Self where Self : Domain.PlansRepository>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -456,24 +455,24 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[Domain.TravelPlan]",
+                "printedName": "[Domain.Plan]",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "TravelPlan",
-                    "printedName": "Domain.TravelPlan",
-                    "usr": "s:6Domain10TravelPlanV"
+                    "name": "Plan",
+                    "printedName": "Domain.Plan",
+                    "usr": "s:6Domain4PlanV"
                   }
                 ],
                 "usr": "s:Sa"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain28AbstractTravelPlanRepositoryP4readSayAA0cD0VGyYaKF",
-            "mangledName": "$s6Domain28AbstractTravelPlanRepositoryP4readSayAA0cD0VGyYaKF",
+            "usr": "s:6Domain15PlansRepositoryP4readSayAA4PlanVGyYaKF",
+            "mangledName": "$s6Domain15PlansRepositoryP4readSayAA4PlanVGyYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.AbstractTravelPlanRepository>",
-            "sugared_genericSig": "<Self where Self : Domain.AbstractTravelPlanRepository>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.PlansRepository>",
+            "sugared_genericSig": "<Self where Self : Domain.PlansRepository>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -497,11 +496,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain28AbstractTravelPlanRepositoryP6delete2atySi_tYaKF",
-            "mangledName": "$s6Domain28AbstractTravelPlanRepositoryP6delete2atySi_tYaKF",
+            "usr": "s:6Domain15PlansRepositoryP6delete2atySi_tYaKF",
+            "mangledName": "$s6Domain15PlansRepositoryP6delete2atySi_tYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.AbstractTravelPlanRepository>",
-            "sugared_genericSig": "<Self where Self : Domain.AbstractTravelPlanRepository>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.PlansRepository>",
+            "sugared_genericSig": "<Self where Self : Domain.PlansRepository>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -509,8 +508,8 @@
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:6Domain28AbstractTravelPlanRepositoryP",
-        "mangledName": "$s6Domain28AbstractTravelPlanRepositoryP",
+        "usr": "s:6Domain15PlansRepositoryP",
+        "mangledName": "$s6Domain15PlansRepositoryP",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"
@@ -528,8 +527,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "TravelPlanSwapBox",
-        "printedName": "TravelPlanSwapBox",
+        "name": "SwapPlansBox",
+        "printedName": "SwapPlansBox",
         "children": [
           {
             "kind": "Var",
@@ -544,8 +543,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Domain17TravelPlanSwapBoxV6sourceSivp",
-            "mangledName": "$s6Domain17TravelPlanSwapBoxV6sourceSivp",
+            "usr": "s:6Domain12SwapPlansBoxV6sourceSivp",
+            "mangledName": "$s6Domain12SwapPlansBoxV6sourceSivp",
             "moduleName": "Domain",
             "declAttributes": [
               "HasStorage",
@@ -567,8 +566,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Domain17TravelPlanSwapBoxV6sourceSivg",
-                "mangledName": "$s6Domain17TravelPlanSwapBoxV6sourceSivg",
+                "usr": "s:6Domain12SwapPlansBoxV6sourceSivg",
+                "mangledName": "$s6Domain12SwapPlansBoxV6sourceSivg",
                 "moduleName": "Domain",
                 "implicit": true,
                 "accessorKind": "get"
@@ -588,8 +587,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Domain17TravelPlanSwapBoxV11destinationSivp",
-            "mangledName": "$s6Domain17TravelPlanSwapBoxV11destinationSivp",
+            "usr": "s:6Domain12SwapPlansBoxV11destinationSivp",
+            "mangledName": "$s6Domain12SwapPlansBoxV11destinationSivp",
             "moduleName": "Domain",
             "declAttributes": [
               "HasStorage",
@@ -611,8 +610,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Domain17TravelPlanSwapBoxV11destinationSivg",
-                "mangledName": "$s6Domain17TravelPlanSwapBoxV11destinationSivg",
+                "usr": "s:6Domain12SwapPlansBoxV11destinationSivg",
+                "mangledName": "$s6Domain12SwapPlansBoxV11destinationSivg",
                 "moduleName": "Domain",
                 "implicit": true,
                 "accessorKind": "get"
@@ -621,19 +620,19 @@
           },
           {
             "kind": "Var",
-            "name": "sourceTravelPlan",
-            "printedName": "sourceTravelPlan",
+            "name": "sourcePlan",
+            "printedName": "sourcePlan",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlan",
-                "printedName": "Domain.TravelPlan",
-                "usr": "s:6Domain10TravelPlanV"
+                "name": "Plan",
+                "printedName": "Domain.Plan",
+                "usr": "s:6Domain4PlanV"
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Domain17TravelPlanSwapBoxV06sourcebC0AA0bC0Vvp",
-            "mangledName": "$s6Domain17TravelPlanSwapBoxV06sourcebC0AA0bC0Vvp",
+            "usr": "s:6Domain12SwapPlansBoxV10sourcePlanAA0F0Vvp",
+            "mangledName": "$s6Domain12SwapPlansBoxV10sourcePlanAA0F0Vvp",
             "moduleName": "Domain",
             "declAttributes": [
               "HasStorage",
@@ -649,14 +648,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "TravelPlan",
-                    "printedName": "Domain.TravelPlan",
-                    "usr": "s:6Domain10TravelPlanV"
+                    "name": "Plan",
+                    "printedName": "Domain.Plan",
+                    "usr": "s:6Domain4PlanV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Domain17TravelPlanSwapBoxV06sourcebC0AA0bC0Vvg",
-                "mangledName": "$s6Domain17TravelPlanSwapBoxV06sourcebC0AA0bC0Vvg",
+                "usr": "s:6Domain12SwapPlansBoxV10sourcePlanAA0F0Vvg",
+                "mangledName": "$s6Domain12SwapPlansBoxV10sourcePlanAA0F0Vvg",
                 "moduleName": "Domain",
                 "implicit": true,
                 "accessorKind": "get"
@@ -665,19 +664,19 @@
           },
           {
             "kind": "Var",
-            "name": "destinationTravelPlan",
-            "printedName": "destinationTravelPlan",
+            "name": "destinationPlan",
+            "printedName": "destinationPlan",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlan",
-                "printedName": "Domain.TravelPlan",
-                "usr": "s:6Domain10TravelPlanV"
+                "name": "Plan",
+                "printedName": "Domain.Plan",
+                "usr": "s:6Domain4PlanV"
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Domain17TravelPlanSwapBoxV011destinationbC0AA0bC0Vvp",
-            "mangledName": "$s6Domain17TravelPlanSwapBoxV011destinationbC0AA0bC0Vvp",
+            "usr": "s:6Domain12SwapPlansBoxV15destinationPlanAA0F0Vvp",
+            "mangledName": "$s6Domain12SwapPlansBoxV15destinationPlanAA0F0Vvp",
             "moduleName": "Domain",
             "declAttributes": [
               "HasStorage",
@@ -693,14 +692,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "TravelPlan",
-                    "printedName": "Domain.TravelPlan",
-                    "usr": "s:6Domain10TravelPlanV"
+                    "name": "Plan",
+                    "printedName": "Domain.Plan",
+                    "usr": "s:6Domain4PlanV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Domain17TravelPlanSwapBoxV011destinationbC0AA0bC0Vvg",
-                "mangledName": "$s6Domain17TravelPlanSwapBoxV011destinationbC0AA0bC0Vvg",
+                "usr": "s:6Domain12SwapPlansBoxV15destinationPlanAA0F0Vvg",
+                "mangledName": "$s6Domain12SwapPlansBoxV15destinationPlanAA0F0Vvg",
                 "moduleName": "Domain",
                 "implicit": true,
                 "accessorKind": "get"
@@ -710,13 +709,13 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(source:destination:sourceTravelPlan:destinationTravelPlan:)",
+            "printedName": "init(source:destination:sourcePlan:destinationPlan:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlanSwapBox",
-                "printedName": "Domain.TravelPlanSwapBox",
-                "usr": "s:6Domain17TravelPlanSwapBoxV"
+                "name": "SwapPlansBox",
+                "printedName": "Domain.SwapPlansBox",
+                "usr": "s:6Domain12SwapPlansBoxV"
               },
               {
                 "kind": "TypeNominal",
@@ -732,20 +731,20 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlan",
-                "printedName": "Domain.TravelPlan",
-                "usr": "s:6Domain10TravelPlanV"
+                "name": "Plan",
+                "printedName": "Domain.Plan",
+                "usr": "s:6Domain4PlanV"
               },
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlan",
-                "printedName": "Domain.TravelPlan",
-                "usr": "s:6Domain10TravelPlanV"
+                "name": "Plan",
+                "printedName": "Domain.Plan",
+                "usr": "s:6Domain4PlanV"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:6Domain17TravelPlanSwapBoxV6source11destination0fbC00gbC0ACSi_SiAA0bC0VAItcfc",
-            "mangledName": "$s6Domain17TravelPlanSwapBoxV6source11destination0fbC00gbC0ACSi_SiAA0bC0VAItcfc",
+            "usr": "s:6Domain12SwapPlansBoxV6source11destination0E4Plan0fG0ACSi_SiAA0G0VAItcfc",
+            "mangledName": "$s6Domain12SwapPlansBoxV6source11destination0E4Plan0fG0ACSi_SiAA0G0VAItcfc",
             "moduleName": "Domain",
             "declAttributes": [
               "AccessControl"
@@ -754,8 +753,8 @@
           }
         ],
         "declKind": "Struct",
-        "usr": "s:6Domain17TravelPlanSwapBoxV",
-        "mangledName": "$s6Domain17TravelPlanSwapBoxV",
+        "usr": "s:6Domain12SwapPlansBoxV",
+        "mangledName": "$s6Domain12SwapPlansBoxV",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"
@@ -763,8 +762,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "TravelPlanSwapUseCase",
-        "printedName": "TravelPlanSwapUseCase",
+        "name": "SwapPlansUseCase",
+        "printedName": "SwapPlansUseCase",
         "children": [
           {
             "kind": "Function",
@@ -778,17 +777,17 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlanSwapBox",
-                "printedName": "Domain.TravelPlanSwapBox",
-                "usr": "s:6Domain17TravelPlanSwapBoxV"
+                "name": "SwapPlansBox",
+                "printedName": "Domain.SwapPlansBox",
+                "usr": "s:6Domain12SwapPlansBoxV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain21TravelPlanSwapUseCaseP7executeyyAA0bcD3BoxVYaKF",
-            "mangledName": "$s6Domain21TravelPlanSwapUseCaseP7executeyyAA0bcD3BoxVYaKF",
+            "usr": "s:6Domain16SwapPlansUseCaseP7executeyyAA0bC3BoxVYaKF",
+            "mangledName": "$s6Domain16SwapPlansUseCaseP7executeyyAA0bC3BoxVYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.TravelPlanSwapUseCase>",
-            "sugared_genericSig": "<Self where Self : Domain.TravelPlanSwapUseCase>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.SwapPlansUseCase>",
+            "sugared_genericSig": "<Self where Self : Domain.SwapPlansUseCase>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -796,8 +795,8 @@
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:6Domain21TravelPlanSwapUseCaseP",
-        "mangledName": "$s6Domain21TravelPlanSwapUseCaseP",
+        "usr": "s:6Domain16SwapPlansUseCaseP",
+        "mangledName": "$s6Domain16SwapPlansUseCaseP",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"
@@ -815,8 +814,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "MemoryImageDeleteUseCase",
-        "printedName": "MemoryImageDeleteUseCase",
+        "name": "DeleteImageUseCase",
+        "printedName": "DeleteImageUseCase",
         "children": [
           {
             "kind": "Function",
@@ -836,11 +835,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain24MemoryImageDeleteUseCaseP7execute2atySi_tYaKF",
-            "mangledName": "$s6Domain24MemoryImageDeleteUseCaseP7execute2atySi_tYaKF",
+            "usr": "s:6Domain18DeleteImageUseCaseP7execute2atySi_tYaKF",
+            "mangledName": "$s6Domain18DeleteImageUseCaseP7execute2atySi_tYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoryImageDeleteUseCase>",
-            "sugared_genericSig": "<Self where Self : Domain.MemoryImageDeleteUseCase>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.DeleteImageUseCase>",
+            "sugared_genericSig": "<Self where Self : Domain.DeleteImageUseCase>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -848,8 +847,8 @@
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:6Domain24MemoryImageDeleteUseCaseP",
-        "mangledName": "$s6Domain24MemoryImageDeleteUseCaseP",
+        "usr": "s:6Domain18DeleteImageUseCaseP",
+        "mangledName": "$s6Domain18DeleteImageUseCaseP",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"
@@ -867,13 +866,13 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "AbstractMemoryRepository",
-        "printedName": "AbstractMemoryRepository",
+        "name": "MemoriesRepository",
+        "printedName": "MemoriesRepository",
         "children": [
           {
             "kind": "Function",
             "name": "upload",
-            "printedName": "upload(at:entity:)",
+            "printedName": "upload(at:memory:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -894,11 +893,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain24AbstractMemoryRepositoryP6upload2at6entityySi_AA0C0VtYaKF",
-            "mangledName": "$s6Domain24AbstractMemoryRepositoryP6upload2at6entityySi_AA0C0VtYaKF",
+            "usr": "s:6Domain18MemoriesRepositoryP6upload2at6memoryySi_AA6MemoryVtYaKF",
+            "mangledName": "$s6Domain18MemoriesRepositoryP6upload2at6memoryySi_AA6MemoryVtYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.AbstractMemoryRepository>",
-            "sugared_genericSig": "<Self where Self : Domain.AbstractMemoryRepository>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoriesRepository>",
+            "sugared_genericSig": "<Self where Self : Domain.MemoriesRepository>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -925,11 +924,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain24AbstractMemoryRepositoryP4readSayAA0C0VGyYaKF",
-            "mangledName": "$s6Domain24AbstractMemoryRepositoryP4readSayAA0C0VGyYaKF",
+            "usr": "s:6Domain18MemoriesRepositoryP4readSayAA6MemoryVGyYaKF",
+            "mangledName": "$s6Domain18MemoriesRepositoryP4readSayAA6MemoryVGyYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.AbstractMemoryRepository>",
-            "sugared_genericSig": "<Self where Self : Domain.AbstractMemoryRepository>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoriesRepository>",
+            "sugared_genericSig": "<Self where Self : Domain.MemoriesRepository>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -953,11 +952,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain24AbstractMemoryRepositoryP6delete2atySi_tYaKF",
-            "mangledName": "$s6Domain24AbstractMemoryRepositoryP6delete2atySi_tYaKF",
+            "usr": "s:6Domain18MemoriesRepositoryP6delete2atySi_tYaKF",
+            "mangledName": "$s6Domain18MemoriesRepositoryP6delete2atySi_tYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.AbstractMemoryRepository>",
-            "sugared_genericSig": "<Self where Self : Domain.AbstractMemoryRepository>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoriesRepository>",
+            "sugared_genericSig": "<Self where Self : Domain.MemoriesRepository>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -965,8 +964,8 @@
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:6Domain24AbstractMemoryRepositoryP",
-        "mangledName": "$s6Domain24AbstractMemoryRepositoryP",
+        "usr": "s:6Domain18MemoriesRepositoryP",
+        "mangledName": "$s6Domain18MemoriesRepositoryP",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"
@@ -991,8 +990,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "MemoryImageUploadUseCase",
-        "printedName": "MemoryImageUploadUseCase",
+        "name": "UploadImageUseCase",
+        "printedName": "UploadImageUseCase",
         "children": [
           {
             "kind": "Function",
@@ -1018,11 +1017,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain24MemoryImageUploadUseCaseP7execute2at_ySi_So7UIImageCtYaKF",
-            "mangledName": "$s6Domain24MemoryImageUploadUseCaseP7execute2at_ySi_So7UIImageCtYaKF",
+            "usr": "s:6Domain18UploadImageUseCaseP7execute2at_ySi_So7UIImageCtYaKF",
+            "mangledName": "$s6Domain18UploadImageUseCaseP7execute2at_ySi_So7UIImageCtYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoryImageUploadUseCase>",
-            "sugared_genericSig": "<Self where Self : Domain.MemoryImageUploadUseCase>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.UploadImageUseCase>",
+            "sugared_genericSig": "<Self where Self : Domain.UploadImageUseCase>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -1030,8 +1029,8 @@
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:6Domain24MemoryImageUploadUseCaseP",
-        "mangledName": "$s6Domain24MemoryImageUploadUseCaseP",
+        "usr": "s:6Domain18UploadImageUseCaseP",
+        "mangledName": "$s6Domain18UploadImageUseCaseP",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"
@@ -1049,8 +1048,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "MemoryUploadUseCase",
-        "printedName": "MemoryUploadUseCase",
+        "name": "UploadMemoryUseCase",
+        "printedName": "UploadMemoryUseCase",
         "children": [
           {
             "kind": "Function",
@@ -1076,11 +1075,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain19MemoryUploadUseCaseP7execute2at_ySi_AA0B0VtYaKF",
-            "mangledName": "$s6Domain19MemoryUploadUseCaseP7execute2at_ySi_AA0B0VtYaKF",
+            "usr": "s:6Domain19UploadMemoryUseCaseP7execute2at_ySi_AA0C0VtYaKF",
+            "mangledName": "$s6Domain19UploadMemoryUseCaseP7execute2at_ySi_AA0C0VtYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoryUploadUseCase>",
-            "sugared_genericSig": "<Self where Self : Domain.MemoryUploadUseCase>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.UploadMemoryUseCase>",
+            "sugared_genericSig": "<Self where Self : Domain.UploadMemoryUseCase>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -1088,8 +1087,8 @@
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:6Domain19MemoryUploadUseCaseP",
-        "mangledName": "$s6Domain19MemoryUploadUseCaseP",
+        "usr": "s:6Domain19UploadMemoryUseCaseP",
+        "mangledName": "$s6Domain19UploadMemoryUseCaseP",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"
@@ -1107,8 +1106,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "TravelPlanReadUseCase",
-        "printedName": "TravelPlanReadUseCase",
+        "name": "ReadPlansUseCase",
+        "printedName": "ReadPlansUseCase",
         "children": [
           {
             "kind": "Function",
@@ -1118,24 +1117,24 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[Domain.TravelPlan]",
+                "printedName": "[Domain.Plan]",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "TravelPlan",
-                    "printedName": "Domain.TravelPlan",
-                    "usr": "s:6Domain10TravelPlanV"
+                    "name": "Plan",
+                    "printedName": "Domain.Plan",
+                    "usr": "s:6Domain4PlanV"
                   }
                 ],
                 "usr": "s:Sa"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain21TravelPlanReadUseCaseP7executeSayAA0bC0VGyYaKF",
-            "mangledName": "$s6Domain21TravelPlanReadUseCaseP7executeSayAA0bC0VGyYaKF",
+            "usr": "s:6Domain16ReadPlansUseCaseP7executeSayAA4PlanVGyYaKF",
+            "mangledName": "$s6Domain16ReadPlansUseCaseP7executeSayAA4PlanVGyYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.TravelPlanReadUseCase>",
-            "sugared_genericSig": "<Self where Self : Domain.TravelPlanReadUseCase>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.ReadPlansUseCase>",
+            "sugared_genericSig": "<Self where Self : Domain.ReadPlansUseCase>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -1143,8 +1142,8 @@
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:6Domain21TravelPlanReadUseCaseP",
-        "mangledName": "$s6Domain21TravelPlanReadUseCaseP",
+        "usr": "s:6Domain16ReadPlansUseCaseP",
+        "mangledName": "$s6Domain16ReadPlansUseCaseP",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"
@@ -1162,8 +1161,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "MemoryDeleteUseCase",
-        "printedName": "MemoryDeleteUseCase",
+        "name": "DeleteMemoryUseCase",
+        "printedName": "DeleteMemoryUseCase",
         "children": [
           {
             "kind": "Function",
@@ -1183,11 +1182,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain19MemoryDeleteUseCaseP7execute2atySi_tYaKF",
-            "mangledName": "$s6Domain19MemoryDeleteUseCaseP7execute2atySi_tYaKF",
+            "usr": "s:6Domain19DeleteMemoryUseCaseP7execute2atySi_tYaKF",
+            "mangledName": "$s6Domain19DeleteMemoryUseCaseP7execute2atySi_tYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoryDeleteUseCase>",
-            "sugared_genericSig": "<Self where Self : Domain.MemoryDeleteUseCase>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.DeleteMemoryUseCase>",
+            "sugared_genericSig": "<Self where Self : Domain.DeleteMemoryUseCase>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -1195,8 +1194,8 @@
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:6Domain19MemoryDeleteUseCaseP",
-        "mangledName": "$s6Domain19MemoryDeleteUseCaseP",
+        "usr": "s:6Domain19DeleteMemoryUseCaseP",
+        "mangledName": "$s6Domain19DeleteMemoryUseCaseP",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"
@@ -1214,79 +1213,79 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "MemoryUseCaseProvider",
-        "printedName": "MemoryUseCaseProvider",
+        "name": "MemoriesUseCaseProvider",
+        "printedName": "MemoriesUseCaseProvider",
         "children": [
           {
             "kind": "Function",
-            "name": "provideMemoryUploadUseCase",
-            "printedName": "provideMemoryUploadUseCase()",
+            "name": "provideUploadMemoryUseCase",
+            "printedName": "provideUploadMemoryUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "MemoryUploadUseCase",
-                "printedName": "Domain.MemoryUploadUseCase",
-                "usr": "s:6Domain19MemoryUploadUseCaseP"
+                "name": "UploadMemoryUseCase",
+                "printedName": "Domain.UploadMemoryUseCase",
+                "usr": "s:6Domain19UploadMemoryUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain21MemoryUseCaseProviderP07provideb6UploadcD0AA0bgcD0_pyF",
-            "mangledName": "$s6Domain21MemoryUseCaseProviderP07provideb6UploadcD0AA0bgcD0_pyF",
+            "usr": "s:6Domain23MemoriesUseCaseProviderP019provideUploadMemorycD0AA0ghcD0_pyF",
+            "mangledName": "$s6Domain23MemoriesUseCaseProviderP019provideUploadMemorycD0AA0ghcD0_pyF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoryUseCaseProvider>",
-            "sugared_genericSig": "<Self where Self : Domain.MemoryUseCaseProvider>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoriesUseCaseProvider>",
+            "sugared_genericSig": "<Self where Self : Domain.MemoriesUseCaseProvider>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
-            "name": "provideMemoryReadUseCase",
-            "printedName": "provideMemoryReadUseCase()",
+            "name": "provideReadMemoriesUseCase",
+            "printedName": "provideReadMemoriesUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "MemoryReadUseCase",
-                "printedName": "Domain.MemoryReadUseCase",
-                "usr": "s:6Domain17MemoryReadUseCaseP"
+                "name": "ReadMemoriesUseCase",
+                "printedName": "Domain.ReadMemoriesUseCase",
+                "usr": "s:6Domain19ReadMemoriesUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain21MemoryUseCaseProviderP07provideb4ReadcD0AA0bgcD0_pyF",
-            "mangledName": "$s6Domain21MemoryUseCaseProviderP07provideb4ReadcD0AA0bgcD0_pyF",
+            "usr": "s:6Domain23MemoriesUseCaseProviderP011provideReadbcD0AA0gbcD0_pyF",
+            "mangledName": "$s6Domain23MemoriesUseCaseProviderP011provideReadbcD0AA0gbcD0_pyF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoryUseCaseProvider>",
-            "sugared_genericSig": "<Self where Self : Domain.MemoryUseCaseProvider>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoriesUseCaseProvider>",
+            "sugared_genericSig": "<Self where Self : Domain.MemoriesUseCaseProvider>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
-            "name": "provideMemoryDeleteUseCase",
-            "printedName": "provideMemoryDeleteUseCase()",
+            "name": "provideDeleteMemoryUseCase",
+            "printedName": "provideDeleteMemoryUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "MemoryDeleteUseCase",
-                "printedName": "Domain.MemoryDeleteUseCase",
-                "usr": "s:6Domain19MemoryDeleteUseCaseP"
+                "name": "DeleteMemoryUseCase",
+                "printedName": "Domain.DeleteMemoryUseCase",
+                "usr": "s:6Domain19DeleteMemoryUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain21MemoryUseCaseProviderP07provideb6DeletecD0AA0bgcD0_pyF",
-            "mangledName": "$s6Domain21MemoryUseCaseProviderP07provideb6DeletecD0AA0bgcD0_pyF",
+            "usr": "s:6Domain23MemoriesUseCaseProviderP019provideDeleteMemorycD0AA0ghcD0_pyF",
+            "mangledName": "$s6Domain23MemoriesUseCaseProviderP019provideDeleteMemorycD0AA0ghcD0_pyF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoryUseCaseProvider>",
-            "sugared_genericSig": "<Self where Self : Domain.MemoryUseCaseProvider>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoriesUseCaseProvider>",
+            "sugared_genericSig": "<Self where Self : Domain.MemoriesUseCaseProvider>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:6Domain21MemoryUseCaseProviderP",
-        "mangledName": "$s6Domain21MemoryUseCaseProviderP",
+        "usr": "s:6Domain23MemoriesUseCaseProviderP",
+        "mangledName": "$s6Domain23MemoriesUseCaseProviderP",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"
@@ -1294,30 +1293,30 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "ConcreteMemoryUseCaseProvider",
-        "printedName": "ConcreteMemoryUseCaseProvider",
+        "name": "DefaultMemoriesUseCaseProvider",
+        "printedName": "DefaultMemoriesUseCaseProvider",
         "children": [
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(_:)",
+            "printedName": "init(repository:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "ConcreteMemoryUseCaseProvider",
-                "printedName": "Domain.ConcreteMemoryUseCaseProvider",
-                "usr": "s:6Domain29ConcreteMemoryUseCaseProviderV"
+                "name": "DefaultMemoriesUseCaseProvider",
+                "printedName": "Domain.DefaultMemoriesUseCaseProvider",
+                "usr": "s:6Domain30DefaultMemoriesUseCaseProviderV"
               },
               {
                 "kind": "TypeNominal",
-                "name": "AbstractMemoryRepository",
-                "printedName": "Domain.AbstractMemoryRepository",
-                "usr": "s:6Domain24AbstractMemoryRepositoryP"
+                "name": "MemoriesRepository",
+                "printedName": "Domain.MemoriesRepository",
+                "usr": "s:6Domain18MemoriesRepositoryP"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:6Domain29ConcreteMemoryUseCaseProviderVyAcA08AbstractC10Repository_pcfc",
-            "mangledName": "$s6Domain29ConcreteMemoryUseCaseProviderVyAcA08AbstractC10Repository_pcfc",
+            "usr": "s:6Domain30DefaultMemoriesUseCaseProviderV10repositoryAcA0C10Repository_p_tcfc",
+            "mangledName": "$s6Domain30DefaultMemoriesUseCaseProviderV10repositoryAcA0C10Repository_p_tcfc",
             "moduleName": "Domain",
             "declAttributes": [
               "AccessControl"
@@ -1326,19 +1325,19 @@
           },
           {
             "kind": "Function",
-            "name": "provideMemoryUploadUseCase",
-            "printedName": "provideMemoryUploadUseCase()",
+            "name": "provideUploadMemoryUseCase",
+            "printedName": "provideUploadMemoryUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "MemoryUploadUseCase",
-                "printedName": "Domain.MemoryUploadUseCase",
-                "usr": "s:6Domain19MemoryUploadUseCaseP"
+                "name": "UploadMemoryUseCase",
+                "printedName": "Domain.UploadMemoryUseCase",
+                "usr": "s:6Domain19UploadMemoryUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain29ConcreteMemoryUseCaseProviderV07providec6UploaddE0AA0chdE0_pyF",
-            "mangledName": "$s6Domain29ConcreteMemoryUseCaseProviderV07providec6UploaddE0AA0chdE0_pyF",
+            "usr": "s:6Domain30DefaultMemoriesUseCaseProviderV019provideUploadMemorydE0AA0hidE0_pyF",
+            "mangledName": "$s6Domain30DefaultMemoriesUseCaseProviderV019provideUploadMemorydE0AA0hidE0_pyF",
             "moduleName": "Domain",
             "declAttributes": [
               "AccessControl"
@@ -1347,19 +1346,19 @@
           },
           {
             "kind": "Function",
-            "name": "provideMemoryReadUseCase",
-            "printedName": "provideMemoryReadUseCase()",
+            "name": "provideReadMemoriesUseCase",
+            "printedName": "provideReadMemoriesUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "MemoryReadUseCase",
-                "printedName": "Domain.MemoryReadUseCase",
-                "usr": "s:6Domain17MemoryReadUseCaseP"
+                "name": "ReadMemoriesUseCase",
+                "printedName": "Domain.ReadMemoriesUseCase",
+                "usr": "s:6Domain19ReadMemoriesUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain29ConcreteMemoryUseCaseProviderV07providec4ReaddE0AA0chdE0_pyF",
-            "mangledName": "$s6Domain29ConcreteMemoryUseCaseProviderV07providec4ReaddE0AA0chdE0_pyF",
+            "usr": "s:6Domain30DefaultMemoriesUseCaseProviderV011provideReadcdE0AA0hcdE0_pyF",
+            "mangledName": "$s6Domain30DefaultMemoriesUseCaseProviderV011provideReadcdE0AA0hcdE0_pyF",
             "moduleName": "Domain",
             "declAttributes": [
               "AccessControl"
@@ -1368,19 +1367,19 @@
           },
           {
             "kind": "Function",
-            "name": "provideMemoryDeleteUseCase",
-            "printedName": "provideMemoryDeleteUseCase()",
+            "name": "provideDeleteMemoryUseCase",
+            "printedName": "provideDeleteMemoryUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "MemoryDeleteUseCase",
-                "printedName": "Domain.MemoryDeleteUseCase",
-                "usr": "s:6Domain19MemoryDeleteUseCaseP"
+                "name": "DeleteMemoryUseCase",
+                "printedName": "Domain.DeleteMemoryUseCase",
+                "usr": "s:6Domain19DeleteMemoryUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain29ConcreteMemoryUseCaseProviderV07providec6DeletedE0AA0chdE0_pyF",
-            "mangledName": "$s6Domain29ConcreteMemoryUseCaseProviderV07providec6DeletedE0AA0chdE0_pyF",
+            "usr": "s:6Domain30DefaultMemoriesUseCaseProviderV019provideDeleteMemorydE0AA0hidE0_pyF",
+            "mangledName": "$s6Domain30DefaultMemoriesUseCaseProviderV019provideDeleteMemorydE0AA0hidE0_pyF",
             "moduleName": "Domain",
             "declAttributes": [
               "AccessControl"
@@ -1389,8 +1388,8 @@
           }
         ],
         "declKind": "Struct",
-        "usr": "s:6Domain29ConcreteMemoryUseCaseProviderV",
-        "mangledName": "$s6Domain29ConcreteMemoryUseCaseProviderV",
+        "usr": "s:6Domain30DefaultMemoriesUseCaseProviderV",
+        "mangledName": "$s6Domain30DefaultMemoriesUseCaseProviderV",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"
@@ -1398,10 +1397,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "MemoryUseCaseProvider",
-            "printedName": "MemoryUseCaseProvider",
-            "usr": "s:6Domain21MemoryUseCaseProviderP",
-            "mangledName": "$s6Domain21MemoryUseCaseProviderP"
+            "name": "MemoriesUseCaseProvider",
+            "printedName": "MemoriesUseCaseProvider",
+            "usr": "s:6Domain23MemoriesUseCaseProviderP",
+            "mangledName": "$s6Domain23MemoriesUseCaseProviderP"
           }
         ]
       },
@@ -1424,8 +1423,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "MemoryImageReadUseCase",
-        "printedName": "MemoryImageReadUseCase",
+        "name": "ReadImageUseCase",
+        "printedName": "ReadImageUseCase",
         "children": [
           {
             "kind": "Function",
@@ -1477,19 +1476,19 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain22MemoryImageReadUseCaseP7execute2at10completionySi_ys6ResultOySo7UIImageCs5Error_pGctF",
-            "mangledName": "$s6Domain22MemoryImageReadUseCaseP7execute2at10completionySi_ys6ResultOySo7UIImageCs5Error_pGctF",
+            "usr": "s:6Domain16ReadImageUseCaseP7execute2at10completionySi_ys6ResultOySo7UIImageCs5Error_pGctF",
+            "mangledName": "$s6Domain16ReadImageUseCaseP7execute2at10completionySi_ys6ResultOySo7UIImageCs5Error_pGctF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoryImageReadUseCase>",
-            "sugared_genericSig": "<Self where Self : Domain.MemoryImageReadUseCase>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.ReadImageUseCase>",
+            "sugared_genericSig": "<Self where Self : Domain.ReadImageUseCase>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:6Domain22MemoryImageReadUseCaseP",
-        "mangledName": "$s6Domain22MemoryImageReadUseCaseP",
+        "usr": "s:6Domain16ReadImageUseCaseP",
+        "mangledName": "$s6Domain16ReadImageUseCaseP",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"
@@ -1507,8 +1506,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "MemoryReadUseCase",
-        "printedName": "MemoryReadUseCase",
+        "name": "ReadMemoriesUseCase",
+        "printedName": "ReadMemoriesUseCase",
         "children": [
           {
             "kind": "Function",
@@ -1531,11 +1530,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain17MemoryReadUseCaseP7executeSayAA0B0VGyYaKF",
-            "mangledName": "$s6Domain17MemoryReadUseCaseP7executeSayAA0B0VGyYaKF",
+            "usr": "s:6Domain19ReadMemoriesUseCaseP7executeSayAA6MemoryVGyYaKF",
+            "mangledName": "$s6Domain19ReadMemoriesUseCaseP7executeSayAA6MemoryVGyYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoryReadUseCase>",
-            "sugared_genericSig": "<Self where Self : Domain.MemoryReadUseCase>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.ReadMemoriesUseCase>",
+            "sugared_genericSig": "<Self where Self : Domain.ReadMemoriesUseCase>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -1543,8 +1542,8 @@
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:6Domain17MemoryReadUseCaseP",
-        "mangledName": "$s6Domain17MemoryReadUseCaseP",
+        "usr": "s:6Domain19ReadMemoriesUseCaseP",
+        "mangledName": "$s6Domain19ReadMemoriesUseCaseP",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"
@@ -1569,8 +1568,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "TravelPlan",
-        "printedName": "TravelPlan",
+        "name": "Plan",
+        "printedName": "Plan",
         "children": [
           {
             "kind": "Var",
@@ -1585,8 +1584,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Domain10TravelPlanV5titleSSvp",
-            "mangledName": "$s6Domain10TravelPlanV5titleSSvp",
+            "usr": "s:6Domain4PlanV5titleSSvp",
+            "mangledName": "$s6Domain4PlanV5titleSSvp",
             "moduleName": "Domain",
             "declAttributes": [
               "HasStorage",
@@ -1608,8 +1607,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Domain10TravelPlanV5titleSSvg",
-                "mangledName": "$s6Domain10TravelPlanV5titleSSvg",
+                "usr": "s:6Domain4PlanV5titleSSvg",
+                "mangledName": "$s6Domain4PlanV5titleSSvg",
                 "moduleName": "Domain",
                 "implicit": true,
                 "accessorKind": "get"
@@ -1629,8 +1628,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Domain10TravelPlanV11descriptionSSvp",
-            "mangledName": "$s6Domain10TravelPlanV11descriptionSSvp",
+            "usr": "s:6Domain4PlanV11descriptionSSvp",
+            "mangledName": "$s6Domain4PlanV11descriptionSSvp",
             "moduleName": "Domain",
             "declAttributes": [
               "HasStorage",
@@ -1652,8 +1651,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Domain10TravelPlanV11descriptionSSvg",
-                "mangledName": "$s6Domain10TravelPlanV11descriptionSSvg",
+                "usr": "s:6Domain4PlanV11descriptionSSvg",
+                "mangledName": "$s6Domain4PlanV11descriptionSSvg",
                 "moduleName": "Domain",
                 "implicit": true,
                 "accessorKind": "get"
@@ -1681,8 +1680,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Domain10TravelPlanV9schedulesSayAA8ScheduleVGvp",
-            "mangledName": "$s6Domain10TravelPlanV9schedulesSayAA8ScheduleVGvp",
+            "usr": "s:6Domain4PlanV9schedulesSayAA8ScheduleVGvp",
+            "mangledName": "$s6Domain4PlanV9schedulesSayAA8ScheduleVGvp",
             "moduleName": "Domain",
             "declAttributes": [
               "HasStorage",
@@ -1712,8 +1711,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Domain10TravelPlanV9schedulesSayAA8ScheduleVGvg",
-                "mangledName": "$s6Domain10TravelPlanV9schedulesSayAA8ScheduleVGvg",
+                "usr": "s:6Domain4PlanV9schedulesSayAA8ScheduleVGvg",
+                "mangledName": "$s6Domain4PlanV9schedulesSayAA8ScheduleVGvg",
                 "moduleName": "Domain",
                 "implicit": true,
                 "accessorKind": "get"
@@ -1727,9 +1726,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlan",
-                "printedName": "Domain.TravelPlan",
-                "usr": "s:6Domain10TravelPlanV"
+                "name": "Plan",
+                "printedName": "Domain.Plan",
+                "usr": "s:6Domain4PlanV"
               },
               {
                 "kind": "TypeNominal",
@@ -1759,8 +1758,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:6Domain10TravelPlanV5title11description9schedulesACSS_SSSayAA8ScheduleVGtcfc",
-            "mangledName": "$s6Domain10TravelPlanV5title11description9schedulesACSS_SSSayAA8ScheduleVGtcfc",
+            "usr": "s:6Domain4PlanV5title11description9schedulesACSS_SSSayAA8ScheduleVGtcfc",
+            "mangledName": "$s6Domain4PlanV5title11description9schedulesACSS_SSSayAA8ScheduleVGtcfc",
             "moduleName": "Domain",
             "declAttributes": [
               "AccessControl"
@@ -1780,20 +1779,20 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlan",
-                "printedName": "Domain.TravelPlan",
-                "usr": "s:6Domain10TravelPlanV"
+                "name": "Plan",
+                "printedName": "Domain.Plan",
+                "usr": "s:6Domain4PlanV"
               },
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlan",
-                "printedName": "Domain.TravelPlan",
-                "usr": "s:6Domain10TravelPlanV"
+                "name": "Plan",
+                "printedName": "Domain.Plan",
+                "usr": "s:6Domain4PlanV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain10TravelPlanV2eeoiySbAC_ACtFZ",
-            "mangledName": "$s6Domain10TravelPlanV2eeoiySbAC_ACtFZ",
+            "usr": "s:6Domain4PlanV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s6Domain4PlanV2eeoiySbAC_ACtFZ",
             "moduleName": "Domain",
             "static": true,
             "declAttributes": [
@@ -1804,12 +1803,11 @@
           }
         ],
         "declKind": "Struct",
-        "usr": "s:6Domain10TravelPlanV",
-        "mangledName": "$s6Domain10TravelPlanV",
+        "usr": "s:6Domain4PlanV",
+        "mangledName": "$s6Domain4PlanV",
         "moduleName": "Domain",
         "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
+          "AccessControl"
         ],
         "conformances": [
           {
@@ -1833,79 +1831,79 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "MemoryImageUseCaseProvider",
-        "printedName": "MemoryImageUseCaseProvider",
+        "name": "ImagesUseCaseProvider",
+        "printedName": "ImagesUseCaseProvider",
         "children": [
           {
             "kind": "Function",
-            "name": "provideMemoryImageUploadUseCase",
-            "printedName": "provideMemoryImageUploadUseCase()",
+            "name": "provideUploadImageUseCase",
+            "printedName": "provideUploadImageUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "MemoryImageUploadUseCase",
-                "printedName": "Domain.MemoryImageUploadUseCase",
-                "usr": "s:6Domain24MemoryImageUploadUseCaseP"
+                "name": "UploadImageUseCase",
+                "printedName": "Domain.UploadImageUseCase",
+                "usr": "s:6Domain18UploadImageUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain26MemoryImageUseCaseProviderP07providebc6UploaddE0AA0bchdE0_pyF",
-            "mangledName": "$s6Domain26MemoryImageUseCaseProviderP07providebc6UploaddE0AA0bchdE0_pyF",
+            "usr": "s:6Domain21ImagesUseCaseProviderP018provideUploadImagecD0AA0ghcD0_pyF",
+            "mangledName": "$s6Domain21ImagesUseCaseProviderP018provideUploadImagecD0AA0ghcD0_pyF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoryImageUseCaseProvider>",
-            "sugared_genericSig": "<Self where Self : Domain.MemoryImageUseCaseProvider>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.ImagesUseCaseProvider>",
+            "sugared_genericSig": "<Self where Self : Domain.ImagesUseCaseProvider>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
-            "name": "provideMemoryImageReadUseCase",
-            "printedName": "provideMemoryImageReadUseCase()",
+            "name": "provideReadImageUseCase",
+            "printedName": "provideReadImageUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "MemoryImageReadUseCase",
-                "printedName": "Domain.MemoryImageReadUseCase",
-                "usr": "s:6Domain22MemoryImageReadUseCaseP"
+                "name": "ReadImageUseCase",
+                "printedName": "Domain.ReadImageUseCase",
+                "usr": "s:6Domain16ReadImageUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain26MemoryImageUseCaseProviderP07providebc4ReaddE0AA0bchdE0_pyF",
-            "mangledName": "$s6Domain26MemoryImageUseCaseProviderP07providebc4ReaddE0AA0bchdE0_pyF",
+            "usr": "s:6Domain21ImagesUseCaseProviderP016provideReadImagecD0AA0ghcD0_pyF",
+            "mangledName": "$s6Domain21ImagesUseCaseProviderP016provideReadImagecD0AA0ghcD0_pyF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoryImageUseCaseProvider>",
-            "sugared_genericSig": "<Self where Self : Domain.MemoryImageUseCaseProvider>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.ImagesUseCaseProvider>",
+            "sugared_genericSig": "<Self where Self : Domain.ImagesUseCaseProvider>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
-            "name": "provideMemoryImageDeleteUseCase",
-            "printedName": "provideMemoryImageDeleteUseCase()",
+            "name": "provideDeleteImageUseCase",
+            "printedName": "provideDeleteImageUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "MemoryImageDeleteUseCase",
-                "printedName": "Domain.MemoryImageDeleteUseCase",
-                "usr": "s:6Domain24MemoryImageDeleteUseCaseP"
+                "name": "DeleteImageUseCase",
+                "printedName": "Domain.DeleteImageUseCase",
+                "usr": "s:6Domain18DeleteImageUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain26MemoryImageUseCaseProviderP07providebc6DeletedE0AA0bchdE0_pyF",
-            "mangledName": "$s6Domain26MemoryImageUseCaseProviderP07providebc6DeletedE0AA0bchdE0_pyF",
+            "usr": "s:6Domain21ImagesUseCaseProviderP018provideDeleteImagecD0AA0ghcD0_pyF",
+            "mangledName": "$s6Domain21ImagesUseCaseProviderP018provideDeleteImagecD0AA0ghcD0_pyF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoryImageUseCaseProvider>",
-            "sugared_genericSig": "<Self where Self : Domain.MemoryImageUseCaseProvider>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.ImagesUseCaseProvider>",
+            "sugared_genericSig": "<Self where Self : Domain.ImagesUseCaseProvider>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:6Domain26MemoryImageUseCaseProviderP",
-        "mangledName": "$s6Domain26MemoryImageUseCaseProviderP",
+        "usr": "s:6Domain21ImagesUseCaseProviderP",
+        "mangledName": "$s6Domain21ImagesUseCaseProviderP",
         "moduleName": "Domain",
         "genericSig": "<τ_0_0 : AnyObject>",
         "sugared_genericSig": "<Self : AnyObject>",
@@ -1915,30 +1913,30 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "ConcreteMemoryImageUseCaseProvider",
-        "printedName": "ConcreteMemoryImageUseCaseProvider",
+        "name": "DefaultImagesUseCaseProvider",
+        "printedName": "DefaultImagesUseCaseProvider",
         "children": [
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(_:)",
+            "printedName": "init(repository:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "ConcreteMemoryImageUseCaseProvider",
-                "printedName": "Domain.ConcreteMemoryImageUseCaseProvider",
-                "usr": "s:6Domain34ConcreteMemoryImageUseCaseProviderC"
+                "name": "DefaultImagesUseCaseProvider",
+                "printedName": "Domain.DefaultImagesUseCaseProvider",
+                "usr": "s:6Domain28DefaultImagesUseCaseProviderC"
               },
               {
                 "kind": "TypeNominal",
-                "name": "AbstractImageRepository",
-                "printedName": "Domain.AbstractImageRepository",
-                "usr": "s:6Domain23AbstractImageRepositoryP"
+                "name": "ImagesRepository",
+                "printedName": "Domain.ImagesRepository",
+                "usr": "s:6Domain16ImagesRepositoryP"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:6Domain34ConcreteMemoryImageUseCaseProviderCyAcA08AbstractD10Repository_pcfc",
-            "mangledName": "$s6Domain34ConcreteMemoryImageUseCaseProviderCyAcA08AbstractD10Repository_pcfc",
+            "usr": "s:6Domain28DefaultImagesUseCaseProviderC10repositoryAcA0C10Repository_p_tcfc",
+            "mangledName": "$s6Domain28DefaultImagesUseCaseProviderC10repositoryAcA0C10Repository_p_tcfc",
             "moduleName": "Domain",
             "declAttributes": [
               "AccessControl"
@@ -1947,19 +1945,19 @@
           },
           {
             "kind": "Function",
-            "name": "provideMemoryImageUploadUseCase",
-            "printedName": "provideMemoryImageUploadUseCase()",
+            "name": "provideUploadImageUseCase",
+            "printedName": "provideUploadImageUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "MemoryImageUploadUseCase",
-                "printedName": "Domain.MemoryImageUploadUseCase",
-                "usr": "s:6Domain24MemoryImageUploadUseCaseP"
+                "name": "UploadImageUseCase",
+                "printedName": "Domain.UploadImageUseCase",
+                "usr": "s:6Domain18UploadImageUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain34ConcreteMemoryImageUseCaseProviderC07providecd6UploadeF0AA0cdieF0_pyF",
-            "mangledName": "$s6Domain34ConcreteMemoryImageUseCaseProviderC07providecd6UploadeF0AA0cdieF0_pyF",
+            "usr": "s:6Domain28DefaultImagesUseCaseProviderC018provideUploadImagedE0AA0hidE0_pyF",
+            "mangledName": "$s6Domain28DefaultImagesUseCaseProviderC018provideUploadImagedE0AA0hidE0_pyF",
             "moduleName": "Domain",
             "declAttributes": [
               "Final",
@@ -1969,19 +1967,19 @@
           },
           {
             "kind": "Function",
-            "name": "provideMemoryImageReadUseCase",
-            "printedName": "provideMemoryImageReadUseCase()",
+            "name": "provideReadImageUseCase",
+            "printedName": "provideReadImageUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "MemoryImageReadUseCase",
-                "printedName": "Domain.MemoryImageReadUseCase",
-                "usr": "s:6Domain22MemoryImageReadUseCaseP"
+                "name": "ReadImageUseCase",
+                "printedName": "Domain.ReadImageUseCase",
+                "usr": "s:6Domain16ReadImageUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain34ConcreteMemoryImageUseCaseProviderC07providecd4ReadeF0AA0cdieF0_pyF",
-            "mangledName": "$s6Domain34ConcreteMemoryImageUseCaseProviderC07providecd4ReadeF0AA0cdieF0_pyF",
+            "usr": "s:6Domain28DefaultImagesUseCaseProviderC016provideReadImagedE0AA0hidE0_pyF",
+            "mangledName": "$s6Domain28DefaultImagesUseCaseProviderC016provideReadImagedE0AA0hidE0_pyF",
             "moduleName": "Domain",
             "declAttributes": [
               "Final",
@@ -1991,19 +1989,19 @@
           },
           {
             "kind": "Function",
-            "name": "provideMemoryImageDeleteUseCase",
-            "printedName": "provideMemoryImageDeleteUseCase()",
+            "name": "provideDeleteImageUseCase",
+            "printedName": "provideDeleteImageUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "MemoryImageDeleteUseCase",
-                "printedName": "Domain.MemoryImageDeleteUseCase",
-                "usr": "s:6Domain24MemoryImageDeleteUseCaseP"
+                "name": "DeleteImageUseCase",
+                "printedName": "Domain.DeleteImageUseCase",
+                "usr": "s:6Domain18DeleteImageUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain34ConcreteMemoryImageUseCaseProviderC07providecd6DeleteeF0AA0cdieF0_pyF",
-            "mangledName": "$s6Domain34ConcreteMemoryImageUseCaseProviderC07providecd6DeleteeF0AA0cdieF0_pyF",
+            "usr": "s:6Domain28DefaultImagesUseCaseProviderC018provideDeleteImagedE0AA0hidE0_pyF",
+            "mangledName": "$s6Domain28DefaultImagesUseCaseProviderC018provideDeleteImagedE0AA0hidE0_pyF",
             "moduleName": "Domain",
             "declAttributes": [
               "Final",
@@ -2013,8 +2011,8 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:6Domain34ConcreteMemoryImageUseCaseProviderC",
-        "mangledName": "$s6Domain34ConcreteMemoryImageUseCaseProviderC",
+        "usr": "s:6Domain28DefaultImagesUseCaseProviderC",
+        "mangledName": "$s6Domain28DefaultImagesUseCaseProviderC",
         "moduleName": "Domain",
         "declAttributes": [
           "Final",
@@ -2023,10 +2021,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "MemoryImageUseCaseProvider",
-            "printedName": "MemoryImageUseCaseProvider",
-            "usr": "s:6Domain26MemoryImageUseCaseProviderP",
-            "mangledName": "$s6Domain26MemoryImageUseCaseProviderP"
+            "name": "ImagesUseCaseProvider",
+            "printedName": "ImagesUseCaseProvider",
+            "usr": "s:6Domain21ImagesUseCaseProviderP",
+            "mangledName": "$s6Domain21ImagesUseCaseProviderP"
           }
         ]
       },
@@ -2237,101 +2235,101 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "TravelPlanUseCaseProvider",
-        "printedName": "TravelPlanUseCaseProvider",
+        "name": "PlansUseCaseProvider",
+        "printedName": "PlansUseCaseProvider",
         "children": [
           {
             "kind": "Function",
-            "name": "provideTravelPlanUploadUseCase",
-            "printedName": "provideTravelPlanUploadUseCase()",
+            "name": "provideUploadPlanUseCase",
+            "printedName": "provideUploadPlanUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlanUploadUseCase",
-                "printedName": "Domain.TravelPlanUploadUseCase",
-                "usr": "s:6Domain23TravelPlanUploadUseCaseP"
+                "name": "UploadPlanUseCase",
+                "printedName": "Domain.UploadPlanUseCase",
+                "usr": "s:6Domain17UploadPlanUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain25TravelPlanUseCaseProviderP07providebc6UploaddE0AA0bchdE0_pyF",
-            "mangledName": "$s6Domain25TravelPlanUseCaseProviderP07providebc6UploaddE0AA0bchdE0_pyF",
+            "usr": "s:6Domain20PlansUseCaseProviderP017provideUploadPlancD0AA0ghcD0_pyF",
+            "mangledName": "$s6Domain20PlansUseCaseProviderP017provideUploadPlancD0AA0ghcD0_pyF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.TravelPlanUseCaseProvider>",
-            "sugared_genericSig": "<Self where Self : Domain.TravelPlanUseCaseProvider>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.PlansUseCaseProvider>",
+            "sugared_genericSig": "<Self where Self : Domain.PlansUseCaseProvider>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
-            "name": "provideTravelPlanReadUseCase",
-            "printedName": "provideTravelPlanReadUseCase()",
+            "name": "provideReadPlansUseCase",
+            "printedName": "provideReadPlansUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlanReadUseCase",
-                "printedName": "Domain.TravelPlanReadUseCase",
-                "usr": "s:6Domain21TravelPlanReadUseCaseP"
+                "name": "ReadPlansUseCase",
+                "printedName": "Domain.ReadPlansUseCase",
+                "usr": "s:6Domain16ReadPlansUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain25TravelPlanUseCaseProviderP07providebc4ReaddE0AA0bchdE0_pyF",
-            "mangledName": "$s6Domain25TravelPlanUseCaseProviderP07providebc4ReaddE0AA0bchdE0_pyF",
+            "usr": "s:6Domain20PlansUseCaseProviderP011provideReadbcD0AA0gbcD0_pyF",
+            "mangledName": "$s6Domain20PlansUseCaseProviderP011provideReadbcD0AA0gbcD0_pyF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.TravelPlanUseCaseProvider>",
-            "sugared_genericSig": "<Self where Self : Domain.TravelPlanUseCaseProvider>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.PlansUseCaseProvider>",
+            "sugared_genericSig": "<Self where Self : Domain.PlansUseCaseProvider>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
-            "name": "provideTravelPlanDeleteUseCase",
-            "printedName": "provideTravelPlanDeleteUseCase()",
+            "name": "provideDeletePlanUseCase",
+            "printedName": "provideDeletePlanUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlanDeleteUseCase",
-                "printedName": "Domain.TravelPlanDeleteUseCase",
-                "usr": "s:6Domain23TravelPlanDeleteUseCaseP"
+                "name": "DeletePlanUseCase",
+                "printedName": "Domain.DeletePlanUseCase",
+                "usr": "s:6Domain17DeletePlanUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain25TravelPlanUseCaseProviderP07providebc6DeletedE0AA0bchdE0_pyF",
-            "mangledName": "$s6Domain25TravelPlanUseCaseProviderP07providebc6DeletedE0AA0bchdE0_pyF",
+            "usr": "s:6Domain20PlansUseCaseProviderP017provideDeletePlancD0AA0ghcD0_pyF",
+            "mangledName": "$s6Domain20PlansUseCaseProviderP017provideDeletePlancD0AA0ghcD0_pyF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.TravelPlanUseCaseProvider>",
-            "sugared_genericSig": "<Self where Self : Domain.TravelPlanUseCaseProvider>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.PlansUseCaseProvider>",
+            "sugared_genericSig": "<Self where Self : Domain.PlansUseCaseProvider>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
-            "name": "provideTravelPlanSwapUseCase",
-            "printedName": "provideTravelPlanSwapUseCase()",
+            "name": "provideSwapPlansUseCase",
+            "printedName": "provideSwapPlansUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlanSwapUseCase",
-                "printedName": "Domain.TravelPlanSwapUseCase",
-                "usr": "s:6Domain21TravelPlanSwapUseCaseP"
+                "name": "SwapPlansUseCase",
+                "printedName": "Domain.SwapPlansUseCase",
+                "usr": "s:6Domain16SwapPlansUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain25TravelPlanUseCaseProviderP07providebc4SwapdE0AA0bchdE0_pyF",
-            "mangledName": "$s6Domain25TravelPlanUseCaseProviderP07providebc4SwapdE0AA0bchdE0_pyF",
+            "usr": "s:6Domain20PlansUseCaseProviderP011provideSwapbcD0AA0gbcD0_pyF",
+            "mangledName": "$s6Domain20PlansUseCaseProviderP011provideSwapbcD0AA0gbcD0_pyF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.TravelPlanUseCaseProvider>",
-            "sugared_genericSig": "<Self where Self : Domain.TravelPlanUseCaseProvider>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.PlansUseCaseProvider>",
+            "sugared_genericSig": "<Self where Self : Domain.PlansUseCaseProvider>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:6Domain25TravelPlanUseCaseProviderP",
-        "mangledName": "$s6Domain25TravelPlanUseCaseProviderP",
+        "usr": "s:6Domain20PlansUseCaseProviderP",
+        "mangledName": "$s6Domain20PlansUseCaseProviderP",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"
@@ -2339,30 +2337,30 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "ConcreteTravelPlanUseCaseProvider",
-        "printedName": "ConcreteTravelPlanUseCaseProvider",
+        "name": "DefaultPlansUseCaseProvider",
+        "printedName": "DefaultPlansUseCaseProvider",
         "children": [
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(_:)",
+            "printedName": "init(repository:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "ConcreteTravelPlanUseCaseProvider",
-                "printedName": "Domain.ConcreteTravelPlanUseCaseProvider",
-                "usr": "s:6Domain33ConcreteTravelPlanUseCaseProviderV"
+                "name": "DefaultPlansUseCaseProvider",
+                "printedName": "Domain.DefaultPlansUseCaseProvider",
+                "usr": "s:6Domain27DefaultPlansUseCaseProviderV"
               },
               {
                 "kind": "TypeNominal",
-                "name": "AbstractTravelPlanRepository",
-                "printedName": "Domain.AbstractTravelPlanRepository",
-                "usr": "s:6Domain28AbstractTravelPlanRepositoryP"
+                "name": "PlansRepository",
+                "printedName": "Domain.PlansRepository",
+                "usr": "s:6Domain15PlansRepositoryP"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:6Domain33ConcreteTravelPlanUseCaseProviderVyAcA08AbstractcD10Repository_pcfc",
-            "mangledName": "$s6Domain33ConcreteTravelPlanUseCaseProviderVyAcA08AbstractcD10Repository_pcfc",
+            "usr": "s:6Domain27DefaultPlansUseCaseProviderV10repositoryAcA0C10Repository_p_tcfc",
+            "mangledName": "$s6Domain27DefaultPlansUseCaseProviderV10repositoryAcA0C10Repository_p_tcfc",
             "moduleName": "Domain",
             "declAttributes": [
               "AccessControl"
@@ -2371,19 +2369,19 @@
           },
           {
             "kind": "Function",
-            "name": "provideTravelPlanUploadUseCase",
-            "printedName": "provideTravelPlanUploadUseCase()",
+            "name": "provideUploadPlanUseCase",
+            "printedName": "provideUploadPlanUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlanUploadUseCase",
-                "printedName": "Domain.TravelPlanUploadUseCase",
-                "usr": "s:6Domain23TravelPlanUploadUseCaseP"
+                "name": "UploadPlanUseCase",
+                "printedName": "Domain.UploadPlanUseCase",
+                "usr": "s:6Domain17UploadPlanUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain33ConcreteTravelPlanUseCaseProviderV07providecd6UploadeF0AA0cdieF0_pyF",
-            "mangledName": "$s6Domain33ConcreteTravelPlanUseCaseProviderV07providecd6UploadeF0AA0cdieF0_pyF",
+            "usr": "s:6Domain27DefaultPlansUseCaseProviderV017provideUploadPlandE0AA0hidE0_pyF",
+            "mangledName": "$s6Domain27DefaultPlansUseCaseProviderV017provideUploadPlandE0AA0hidE0_pyF",
             "moduleName": "Domain",
             "declAttributes": [
               "AccessControl"
@@ -2392,19 +2390,19 @@
           },
           {
             "kind": "Function",
-            "name": "provideTravelPlanReadUseCase",
-            "printedName": "provideTravelPlanReadUseCase()",
+            "name": "provideReadPlansUseCase",
+            "printedName": "provideReadPlansUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlanReadUseCase",
-                "printedName": "Domain.TravelPlanReadUseCase",
-                "usr": "s:6Domain21TravelPlanReadUseCaseP"
+                "name": "ReadPlansUseCase",
+                "printedName": "Domain.ReadPlansUseCase",
+                "usr": "s:6Domain16ReadPlansUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain33ConcreteTravelPlanUseCaseProviderV07providecd4ReadeF0AA0cdieF0_pyF",
-            "mangledName": "$s6Domain33ConcreteTravelPlanUseCaseProviderV07providecd4ReadeF0AA0cdieF0_pyF",
+            "usr": "s:6Domain27DefaultPlansUseCaseProviderV011provideReadcdE0AA0hcdE0_pyF",
+            "mangledName": "$s6Domain27DefaultPlansUseCaseProviderV011provideReadcdE0AA0hcdE0_pyF",
             "moduleName": "Domain",
             "declAttributes": [
               "AccessControl"
@@ -2413,19 +2411,19 @@
           },
           {
             "kind": "Function",
-            "name": "provideTravelPlanDeleteUseCase",
-            "printedName": "provideTravelPlanDeleteUseCase()",
+            "name": "provideDeletePlanUseCase",
+            "printedName": "provideDeletePlanUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlanDeleteUseCase",
-                "printedName": "Domain.TravelPlanDeleteUseCase",
-                "usr": "s:6Domain23TravelPlanDeleteUseCaseP"
+                "name": "DeletePlanUseCase",
+                "printedName": "Domain.DeletePlanUseCase",
+                "usr": "s:6Domain17DeletePlanUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain33ConcreteTravelPlanUseCaseProviderV07providecd6DeleteeF0AA0cdieF0_pyF",
-            "mangledName": "$s6Domain33ConcreteTravelPlanUseCaseProviderV07providecd6DeleteeF0AA0cdieF0_pyF",
+            "usr": "s:6Domain27DefaultPlansUseCaseProviderV017provideDeletePlandE0AA0hidE0_pyF",
+            "mangledName": "$s6Domain27DefaultPlansUseCaseProviderV017provideDeletePlandE0AA0hidE0_pyF",
             "moduleName": "Domain",
             "declAttributes": [
               "AccessControl"
@@ -2434,19 +2432,19 @@
           },
           {
             "kind": "Function",
-            "name": "provideTravelPlanSwapUseCase",
-            "printedName": "provideTravelPlanSwapUseCase()",
+            "name": "provideSwapPlansUseCase",
+            "printedName": "provideSwapPlansUseCase()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlanSwapUseCase",
-                "printedName": "Domain.TravelPlanSwapUseCase",
-                "usr": "s:6Domain21TravelPlanSwapUseCaseP"
+                "name": "SwapPlansUseCase",
+                "printedName": "Domain.SwapPlansUseCase",
+                "usr": "s:6Domain16SwapPlansUseCaseP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain33ConcreteTravelPlanUseCaseProviderV07providecd4SwapeF0AA0cdieF0_pyF",
-            "mangledName": "$s6Domain33ConcreteTravelPlanUseCaseProviderV07providecd4SwapeF0AA0cdieF0_pyF",
+            "usr": "s:6Domain27DefaultPlansUseCaseProviderV011provideSwapcdE0AA0hcdE0_pyF",
+            "mangledName": "$s6Domain27DefaultPlansUseCaseProviderV011provideSwapcdE0AA0hcdE0_pyF",
             "moduleName": "Domain",
             "declAttributes": [
               "AccessControl"
@@ -2455,8 +2453,8 @@
           }
         ],
         "declKind": "Struct",
-        "usr": "s:6Domain33ConcreteTravelPlanUseCaseProviderV",
-        "mangledName": "$s6Domain33ConcreteTravelPlanUseCaseProviderV",
+        "usr": "s:6Domain27DefaultPlansUseCaseProviderV",
+        "mangledName": "$s6Domain27DefaultPlansUseCaseProviderV",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"
@@ -2464,10 +2462,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "TravelPlanUseCaseProvider",
-            "printedName": "TravelPlanUseCaseProvider",
-            "usr": "s:6Domain25TravelPlanUseCaseProviderP",
-            "mangledName": "$s6Domain25TravelPlanUseCaseProviderP"
+            "name": "PlansUseCaseProvider",
+            "printedName": "PlansUseCaseProvider",
+            "usr": "s:6Domain20PlansUseCaseProviderP",
+            "mangledName": "$s6Domain20PlansUseCaseProviderP"
           }
         ]
       },
@@ -2483,8 +2481,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "TravelPlanDeleteUseCase",
-        "printedName": "TravelPlanDeleteUseCase",
+        "name": "DeletePlanUseCase",
+        "printedName": "DeletePlanUseCase",
         "children": [
           {
             "kind": "Function",
@@ -2504,11 +2502,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain23TravelPlanDeleteUseCaseP7execute2atySi_tYaKF",
-            "mangledName": "$s6Domain23TravelPlanDeleteUseCaseP7execute2atySi_tYaKF",
+            "usr": "s:6Domain17DeletePlanUseCaseP7execute2atySi_tYaKF",
+            "mangledName": "$s6Domain17DeletePlanUseCaseP7execute2atySi_tYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.TravelPlanDeleteUseCase>",
-            "sugared_genericSig": "<Self where Self : Domain.TravelPlanDeleteUseCase>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.DeletePlanUseCase>",
+            "sugared_genericSig": "<Self where Self : Domain.DeletePlanUseCase>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -2516,8 +2514,8 @@
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:6Domain23TravelPlanDeleteUseCaseP",
-        "mangledName": "$s6Domain23TravelPlanDeleteUseCaseP",
+        "usr": "s:6Domain17DeletePlanUseCaseP",
+        "mangledName": "$s6Domain17DeletePlanUseCaseP",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"
@@ -2542,8 +2540,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "AbstractImageRepository",
-        "printedName": "AbstractImageRepository",
+        "name": "ImagesRepository",
+        "printedName": "ImagesRepository",
         "children": [
           {
             "kind": "Function",
@@ -2569,11 +2567,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain23AbstractImageRepositoryP6upload2at_ySi_So7UIImageCtYaKF",
-            "mangledName": "$s6Domain23AbstractImageRepositoryP6upload2at_ySi_So7UIImageCtYaKF",
+            "usr": "s:6Domain16ImagesRepositoryP6upload2at_ySi_So7UIImageCtYaKF",
+            "mangledName": "$s6Domain16ImagesRepositoryP6upload2at_ySi_So7UIImageCtYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.AbstractImageRepository>",
-            "sugared_genericSig": "<Self where Self : Domain.AbstractImageRepository>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.ImagesRepository>",
+            "sugared_genericSig": "<Self where Self : Domain.ImagesRepository>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -2629,11 +2627,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain23AbstractImageRepositoryP4read2at_ySi_ys6ResultOySo7UIImageCs5Error_pGctF",
-            "mangledName": "$s6Domain23AbstractImageRepositoryP4read2at_ySi_ys6ResultOySo7UIImageCs5Error_pGctF",
+            "usr": "s:6Domain16ImagesRepositoryP4read2at_ySi_ys6ResultOySo7UIImageCs5Error_pGctF",
+            "mangledName": "$s6Domain16ImagesRepositoryP4read2at_ySi_ys6ResultOySo7UIImageCs5Error_pGctF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.AbstractImageRepository>",
-            "sugared_genericSig": "<Self where Self : Domain.AbstractImageRepository>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.ImagesRepository>",
+            "sugared_genericSig": "<Self where Self : Domain.ImagesRepository>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
@@ -2656,11 +2654,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain23AbstractImageRepositoryP6delete2atySi_tYaKF",
-            "mangledName": "$s6Domain23AbstractImageRepositoryP6delete2atySi_tYaKF",
+            "usr": "s:6Domain16ImagesRepositoryP6delete2atySi_tYaKF",
+            "mangledName": "$s6Domain16ImagesRepositoryP6delete2atySi_tYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.AbstractImageRepository>",
-            "sugared_genericSig": "<Self where Self : Domain.AbstractImageRepository>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.ImagesRepository>",
+            "sugared_genericSig": "<Self where Self : Domain.ImagesRepository>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -2668,8 +2666,8 @@
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:6Domain23AbstractImageRepositoryP",
-        "mangledName": "$s6Domain23AbstractImageRepositoryP",
+        "usr": "s:6Domain16ImagesRepositoryP",
+        "mangledName": "$s6Domain16ImagesRepositoryP",
         "moduleName": "Domain",
         "genericSig": "<τ_0_0 : AnyObject>",
         "sugared_genericSig": "<Self : AnyObject>",
@@ -2689,13 +2687,13 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "TravelPlanUploadUseCase",
-        "printedName": "TravelPlanUploadUseCase",
+        "name": "UploadPlanUseCase",
+        "printedName": "UploadPlanUseCase",
         "children": [
           {
             "kind": "Function",
             "name": "execute",
-            "printedName": "execute(at:travelPlan:)",
+            "printedName": "execute(at:plan:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2710,17 +2708,17 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "TravelPlan",
-                "printedName": "Domain.TravelPlan",
-                "usr": "s:6Domain10TravelPlanV"
+                "name": "Plan",
+                "printedName": "Domain.Plan",
+                "usr": "s:6Domain4PlanV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain23TravelPlanUploadUseCaseP7execute2at06travelC0ySi_AA0bC0VtYaKF",
-            "mangledName": "$s6Domain23TravelPlanUploadUseCaseP7execute2at06travelC0ySi_AA0bC0VtYaKF",
+            "usr": "s:6Domain17UploadPlanUseCaseP7execute2at4planySi_AA0C0VtYaKF",
+            "mangledName": "$s6Domain17UploadPlanUseCaseP7execute2at4planySi_AA0C0VtYaKF",
             "moduleName": "Domain",
-            "genericSig": "<τ_0_0 where τ_0_0 : Domain.TravelPlanUploadUseCase>",
-            "sugared_genericSig": "<Self where Self : Domain.TravelPlanUploadUseCase>",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.UploadPlanUseCase>",
+            "sugared_genericSig": "<Self where Self : Domain.UploadPlanUseCase>",
             "protocolReq": true,
             "throwing": true,
             "reqNewWitnessTableEntry": true,
@@ -2728,8 +2726,8 @@
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:6Domain23TravelPlanUploadUseCaseP",
-        "mangledName": "$s6Domain23TravelPlanUploadUseCaseP",
+        "usr": "s:6Domain17UploadPlanUseCaseP",
+        "mangledName": "$s6Domain17UploadPlanUseCaseP",
         "moduleName": "Domain",
         "declAttributes": [
           "AccessControl"

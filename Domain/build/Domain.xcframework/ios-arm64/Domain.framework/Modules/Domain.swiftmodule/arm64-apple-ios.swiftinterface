@@ -20,37 +20,37 @@ public struct Schedule {
 extension Domain.Schedule : Swift.Equatable {
   public static func == (lhs: Domain.Schedule, rhs: Domain.Schedule) -> Swift.Bool
 }
-public protocol AbstractTravelPlanRepository {
+public protocol PlansRepository {
   #if compiler(>=5.3) && $AsyncAwait
-  func upload(at index: Swift.Int, entity: Domain.TravelPlan) async throws
+  func upload(at index: Swift.Int, plan: Domain.Plan) async throws
   #endif
   #if compiler(>=5.3) && $AsyncAwait
-  func read() async throws -> [Domain.TravelPlan]
+  func read() async throws -> [Domain.Plan]
   #endif
   #if compiler(>=5.3) && $AsyncAwait
   func delete(at index: Swift.Int) async throws
   #endif
 }
-public struct TravelPlanSwapBox {
+public struct SwapPlansBox {
   public let source: Swift.Int
   public let destination: Swift.Int
-  public let sourceTravelPlan: Domain.TravelPlan
-  public let destinationTravelPlan: Domain.TravelPlan
-  public init(source: Swift.Int, destination: Swift.Int, sourceTravelPlan: Domain.TravelPlan, destinationTravelPlan: Domain.TravelPlan)
+  public let sourcePlan: Domain.Plan
+  public let destinationPlan: Domain.Plan
+  public init(source: Swift.Int, destination: Swift.Int, sourcePlan: Domain.Plan, destinationPlan: Domain.Plan)
 }
-public protocol TravelPlanSwapUseCase {
+public protocol SwapPlansUseCase {
   #if compiler(>=5.3) && $AsyncAwait
-  func execute(_ travelPlanSwapBox: Domain.TravelPlanSwapBox) async throws
+  func execute(_ planSwapBox: Domain.SwapPlansBox) async throws
   #endif
 }
-public protocol MemoryImageDeleteUseCase {
+public protocol DeleteImageUseCase {
   #if compiler(>=5.3) && $AsyncAwait
   func execute(at index: Swift.Int) async throws
   #endif
 }
-public protocol AbstractMemoryRepository {
+public protocol MemoriesRepository {
   #if compiler(>=5.3) && $AsyncAwait
-  func upload(at index: Swift.Int, entity: Domain.Memory) async throws
+  func upload(at index: Swift.Int, memory: Domain.Memory) async throws
   #endif
   #if compiler(>=5.3) && $AsyncAwait
   func read() async throws -> [Domain.Memory]
@@ -59,64 +59,64 @@ public protocol AbstractMemoryRepository {
   func delete(at index: Swift.Int) async throws
   #endif
 }
-public protocol MemoryImageUploadUseCase {
+public protocol UploadImageUseCase {
   #if compiler(>=5.3) && $AsyncAwait
   func execute(at index: Swift.Int, _ image: UIKit.UIImage) async throws
   #endif
 }
-public protocol MemoryUploadUseCase {
+public protocol UploadMemoryUseCase {
   #if compiler(>=5.3) && $AsyncAwait
   func execute(at index: Swift.Int, _ memory: Domain.Memory) async throws
   #endif
 }
-public protocol TravelPlanReadUseCase {
+public protocol ReadPlansUseCase {
   #if compiler(>=5.3) && $AsyncAwait
-  func execute() async throws -> [Domain.TravelPlan]
+  func execute() async throws -> [Domain.Plan]
   #endif
 }
-public protocol MemoryDeleteUseCase {
+public protocol DeleteMemoryUseCase {
   #if compiler(>=5.3) && $AsyncAwait
   func execute(at index: Swift.Int) async throws
   #endif
 }
-public protocol MemoryUseCaseProvider {
-  func provideMemoryUploadUseCase() -> Domain.MemoryUploadUseCase
-  func provideMemoryReadUseCase() -> Domain.MemoryReadUseCase
-  func provideMemoryDeleteUseCase() -> Domain.MemoryDeleteUseCase
+public protocol MemoriesUseCaseProvider {
+  func provideUploadMemoryUseCase() -> Domain.UploadMemoryUseCase
+  func provideReadMemoriesUseCase() -> Domain.ReadMemoriesUseCase
+  func provideDeleteMemoryUseCase() -> Domain.DeleteMemoryUseCase
 }
-public struct ConcreteMemoryUseCaseProvider : Domain.MemoryUseCaseProvider {
-  public init(_ repository: Domain.AbstractMemoryRepository)
-  public func provideMemoryUploadUseCase() -> Domain.MemoryUploadUseCase
-  public func provideMemoryReadUseCase() -> Domain.MemoryReadUseCase
-  public func provideMemoryDeleteUseCase() -> Domain.MemoryDeleteUseCase
+public struct DefaultMemoriesUseCaseProvider : Domain.MemoriesUseCaseProvider {
+  public init(repository: Domain.MemoriesRepository)
+  public func provideUploadMemoryUseCase() -> Domain.UploadMemoryUseCase
+  public func provideReadMemoriesUseCase() -> Domain.ReadMemoriesUseCase
+  public func provideDeleteMemoryUseCase() -> Domain.DeleteMemoryUseCase
 }
-public protocol MemoryImageReadUseCase {
+public protocol ReadImageUseCase {
   func execute(at index: Swift.Int, completion: @escaping ((Swift.Result<UIKit.UIImage, Swift.Error>) -> Swift.Void))
 }
-public protocol MemoryReadUseCase {
+public protocol ReadMemoriesUseCase {
   #if compiler(>=5.3) && $AsyncAwait
   func execute() async throws -> [Domain.Memory]
   #endif
 }
-public struct TravelPlan {
+public struct Plan {
   public let title: Swift.String
   public let description: Swift.String
   public let schedules: [Domain.Schedule]
   public init(title: Swift.String, description: Swift.String, schedules: [Domain.Schedule])
 }
-extension Domain.TravelPlan : Swift.Equatable {
-  public static func == (lhs: Domain.TravelPlan, rhs: Domain.TravelPlan) -> Swift.Bool
+extension Domain.Plan : Swift.Equatable {
+  public static func == (lhs: Domain.Plan, rhs: Domain.Plan) -> Swift.Bool
 }
-public protocol MemoryImageUseCaseProvider : AnyObject {
-  func provideMemoryImageUploadUseCase() -> Domain.MemoryImageUploadUseCase
-  func provideMemoryImageReadUseCase() -> Domain.MemoryImageReadUseCase
-  func provideMemoryImageDeleteUseCase() -> Domain.MemoryImageDeleteUseCase
+public protocol ImagesUseCaseProvider : AnyObject {
+  func provideUploadImageUseCase() -> Domain.UploadImageUseCase
+  func provideReadImageUseCase() -> Domain.ReadImageUseCase
+  func provideDeleteImageUseCase() -> Domain.DeleteImageUseCase
 }
-final public class ConcreteMemoryImageUseCaseProvider : Domain.MemoryImageUseCaseProvider {
-  public init(_ repository: Domain.AbstractImageRepository)
-  final public func provideMemoryImageUploadUseCase() -> Domain.MemoryImageUploadUseCase
-  final public func provideMemoryImageReadUseCase() -> Domain.MemoryImageReadUseCase
-  final public func provideMemoryImageDeleteUseCase() -> Domain.MemoryImageDeleteUseCase
+final public class DefaultImagesUseCaseProvider : Domain.ImagesUseCaseProvider {
+  public init(repository: Domain.ImagesRepository)
+  final public func provideUploadImageUseCase() -> Domain.UploadImageUseCase
+  final public func provideReadImageUseCase() -> Domain.ReadImageUseCase
+  final public func provideDeleteImageUseCase() -> Domain.DeleteImageUseCase
   @objc deinit
 }
 public struct Memory {
@@ -125,25 +125,25 @@ public struct Memory {
   public let uploadDate: Foundation.Date
   public init(title: Swift.String, index: Swift.Int, uploadDate: Foundation.Date)
 }
-public protocol TravelPlanUseCaseProvider {
-  func provideTravelPlanUploadUseCase() -> Domain.TravelPlanUploadUseCase
-  func provideTravelPlanReadUseCase() -> Domain.TravelPlanReadUseCase
-  func provideTravelPlanDeleteUseCase() -> Domain.TravelPlanDeleteUseCase
-  func provideTravelPlanSwapUseCase() -> Domain.TravelPlanSwapUseCase
+public protocol PlansUseCaseProvider {
+  func provideUploadPlanUseCase() -> Domain.UploadPlanUseCase
+  func provideReadPlansUseCase() -> Domain.ReadPlansUseCase
+  func provideDeletePlanUseCase() -> Domain.DeletePlanUseCase
+  func provideSwapPlansUseCase() -> Domain.SwapPlansUseCase
 }
-public struct ConcreteTravelPlanUseCaseProvider : Domain.TravelPlanUseCaseProvider {
-  public init(_ repository: Domain.AbstractTravelPlanRepository)
-  public func provideTravelPlanUploadUseCase() -> Domain.TravelPlanUploadUseCase
-  public func provideTravelPlanReadUseCase() -> Domain.TravelPlanReadUseCase
-  public func provideTravelPlanDeleteUseCase() -> Domain.TravelPlanDeleteUseCase
-  public func provideTravelPlanSwapUseCase() -> Domain.TravelPlanSwapUseCase
+public struct DefaultPlansUseCaseProvider : Domain.PlansUseCaseProvider {
+  public init(repository: Domain.PlansRepository)
+  public func provideUploadPlanUseCase() -> Domain.UploadPlanUseCase
+  public func provideReadPlansUseCase() -> Domain.ReadPlansUseCase
+  public func provideDeletePlanUseCase() -> Domain.DeletePlanUseCase
+  public func provideSwapPlansUseCase() -> Domain.SwapPlansUseCase
 }
-public protocol TravelPlanDeleteUseCase {
+public protocol DeletePlanUseCase {
   #if compiler(>=5.3) && $AsyncAwait
   func execute(at index: Swift.Int) async throws
   #endif
 }
-public protocol AbstractImageRepository : AnyObject {
+public protocol ImagesRepository : AnyObject {
   #if compiler(>=5.3) && $AsyncAwait
   func upload(at index: Swift.Int, _ image: UIKit.UIImage) async throws
   #endif
@@ -152,8 +152,8 @@ public protocol AbstractImageRepository : AnyObject {
   func delete(at index: Swift.Int) async throws
   #endif
 }
-public protocol TravelPlanUploadUseCase {
+public protocol UploadPlanUseCase {
   #if compiler(>=5.3) && $AsyncAwait
-  func execute(at index: Swift.Int, travelPlan: Domain.TravelPlan) async throws
+  func execute(at index: Swift.Int, plan: Domain.Plan) async throws
   #endif
 }
