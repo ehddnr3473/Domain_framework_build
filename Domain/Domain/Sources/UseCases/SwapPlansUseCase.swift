@@ -40,14 +40,14 @@ struct DefaultSwapPlansUseCase: SwapPlansUseCase {
             taskGroup.addTask { [self] in
                 try await repository.upload(
                     at: swapPlansBox.source,
-                    plan: swapPlansBox.sourcePlan
+                    plan: swapPlansBox.destinationPlan
                 )
             }
             
             taskGroup.addTask { [self] in
                 try await repository.upload(
                     at: swapPlansBox.destination,
-                    plan: swapPlansBox.destinationPlan
+                    plan: swapPlansBox.sourcePlan
                 )
             }
             
