@@ -28,7 +28,7 @@ public protocol PlansRepository {
   func read() async throws -> [Domain.Plan]
   #endif
   #if compiler(>=5.3) && $AsyncAwait
-  func delete(at index: Swift.Int) async throws
+  func delete(at index: Swift.Int, plans: [Domain.Plan]) async throws
   #endif
 }
 public struct SwapPlansBox {
@@ -140,7 +140,7 @@ public struct DefaultPlansUseCaseProvider : Domain.PlansUseCaseProvider {
 }
 public protocol DeletePlanUseCase {
   #if compiler(>=5.3) && $AsyncAwait
-  func execute(at index: Swift.Int) async throws
+  func execute(at index: Swift.Int, plans: [Domain.Plan]) async throws
   #endif
 }
 public protocol ImagesRepository : AnyObject {

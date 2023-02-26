@@ -481,7 +481,7 @@
           {
             "kind": "Function",
             "name": "delete",
-            "printedName": "delete(at:)",
+            "printedName": "delete(at:plans:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -493,11 +493,25 @@
                 "name": "Int",
                 "printedName": "Swift.Int",
                 "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Domain.Plan]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Plan",
+                    "printedName": "Domain.Plan",
+                    "usr": "s:6Domain4PlanV"
+                  }
+                ],
+                "usr": "s:Sa"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain15PlansRepositoryP6delete2atySi_tYaKF",
-            "mangledName": "$s6Domain15PlansRepositoryP6delete2atySi_tYaKF",
+            "usr": "s:6Domain15PlansRepositoryP6delete2at5plansySi_SayAA4PlanVGtYaKF",
+            "mangledName": "$s6Domain15PlansRepositoryP6delete2at5plansySi_SayAA4PlanVGtYaKF",
             "moduleName": "Domain",
             "genericSig": "<τ_0_0 where τ_0_0 : Domain.PlansRepository>",
             "sugared_genericSig": "<Self where Self : Domain.PlansRepository>",
@@ -2487,7 +2501,7 @@
           {
             "kind": "Function",
             "name": "execute",
-            "printedName": "execute(at:)",
+            "printedName": "execute(at:plans:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2499,11 +2513,25 @@
                 "name": "Int",
                 "printedName": "Swift.Int",
                 "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Domain.Plan]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Plan",
+                    "printedName": "Domain.Plan",
+                    "usr": "s:6Domain4PlanV"
+                  }
+                ],
+                "usr": "s:Sa"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain17DeletePlanUseCaseP7execute2atySi_tYaKF",
-            "mangledName": "$s6Domain17DeletePlanUseCaseP7execute2atySi_tYaKF",
+            "usr": "s:6Domain17DeletePlanUseCaseP7execute2at5plansySi_SayAA0C0VGtYaKF",
+            "mangledName": "$s6Domain17DeletePlanUseCaseP7execute2at5plansySi_SayAA0C0VGtYaKF",
             "moduleName": "Domain",
             "genericSig": "<τ_0_0 where τ_0_0 : Domain.DeletePlanUseCase>",
             "sugared_genericSig": "<Self where Self : Domain.DeletePlanUseCase>",
