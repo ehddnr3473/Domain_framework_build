@@ -886,18 +886,12 @@
           {
             "kind": "Function",
             "name": "upload",
-            "printedName": "upload(at:memory:)",
+            "printedName": "upload(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
               },
               {
                 "kind": "TypeNominal",
@@ -907,8 +901,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain18MemoriesRepositoryP6upload2at6memoryySi_AA6MemoryVtYaKF",
-            "mangledName": "$s6Domain18MemoriesRepositoryP6upload2at6memoryySi_AA6MemoryVtYaKF",
+            "usr": "s:6Domain18MemoriesRepositoryP6uploadyyAA6MemoryVYaKF",
+            "mangledName": "$s6Domain18MemoriesRepositoryP6uploadyyAA6MemoryVYaKF",
             "moduleName": "Domain",
             "genericSig": "<τ_0_0 where τ_0_0 : Domain.MemoriesRepository>",
             "sugared_genericSig": "<Self where Self : Domain.MemoriesRepository>",
@@ -1068,18 +1062,12 @@
           {
             "kind": "Function",
             "name": "execute",
-            "printedName": "execute(at:_:)",
+            "printedName": "execute(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
               },
               {
                 "kind": "TypeNominal",
@@ -1089,8 +1077,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain19UploadMemoryUseCaseP7execute2at_ySi_AA0C0VtYaKF",
-            "mangledName": "$s6Domain19UploadMemoryUseCaseP7execute2at_ySi_AA0C0VtYaKF",
+            "usr": "s:6Domain19UploadMemoryUseCaseP7executeyyAA0C0VYaKF",
+            "mangledName": "$s6Domain19UploadMemoryUseCaseP7executeyyAA0C0VYaKF",
             "moduleName": "Domain",
             "genericSig": "<τ_0_0 where τ_0_0 : Domain.UploadMemoryUseCase>",
             "sugared_genericSig": "<Self where Self : Domain.UploadMemoryUseCase>",

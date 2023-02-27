@@ -50,7 +50,7 @@ public protocol DeleteImageUseCase {
 }
 public protocol MemoriesRepository {
   #if compiler(>=5.3) && $AsyncAwait
-  func upload(at index: Swift.Int, memory: Domain.Memory) async throws
+  func upload(_ memory: Domain.Memory) async throws
   #endif
   #if compiler(>=5.3) && $AsyncAwait
   func read() async throws -> [Domain.Memory]
@@ -66,7 +66,7 @@ public protocol UploadImageUseCase {
 }
 public protocol UploadMemoryUseCase {
   #if compiler(>=5.3) && $AsyncAwait
-  func execute(at index: Swift.Int, _ memory: Domain.Memory) async throws
+  func execute(_ memory: Domain.Memory) async throws
   #endif
 }
 public protocol ReadPlansUseCase {
