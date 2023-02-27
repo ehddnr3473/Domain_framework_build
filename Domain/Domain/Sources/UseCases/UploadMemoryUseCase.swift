@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol UploadMemoryUseCase {
-    func execute(at index: Int, _ memory: Memory) async throws
+    func execute(_ memory: Memory) async throws
 }
 
 struct DefaultUploadMemoryUseCase: UploadMemoryUseCase {
@@ -18,7 +18,7 @@ struct DefaultUploadMemoryUseCase: UploadMemoryUseCase {
         self.repository = repository
     }
     
-    func execute(at index: Int, _ memory: Memory) async throws {
-        try await repository.upload(at: index, memory: memory)
+    func execute(_ memory: Memory) async throws {
+        try await repository.upload(memory)
     }
 }
