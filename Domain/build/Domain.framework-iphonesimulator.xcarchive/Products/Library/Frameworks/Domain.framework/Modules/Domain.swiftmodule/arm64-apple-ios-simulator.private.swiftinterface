@@ -119,11 +119,17 @@ final public class DefaultImagesUseCaseProvider : Domain.ImagesUseCaseProvider {
   final public func provideDeleteImageUseCase() -> Domain.DeleteImageUseCase
   @objc deinit
 }
-public struct Memory {
+public struct Memory : Swift.Hashable {
+  public typealias Identifier = Swift.Int
+  public let id: Domain.Memory.Identifier
   public let title: Swift.String
-  public let index: Swift.Int
   public let uploadDate: Foundation.Date
-  public init(title: Swift.String, index: Swift.Int, uploadDate: Foundation.Date)
+  public init(id: Swift.Int, title: Swift.String, uploadDate: Foundation.Date)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: Domain.Memory, b: Domain.Memory) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 public protocol PlansUseCaseProvider {
   func provideUploadPlanUseCase() -> Domain.UploadPlanUseCase
