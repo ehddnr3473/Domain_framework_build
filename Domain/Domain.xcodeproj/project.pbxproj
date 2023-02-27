@@ -103,9 +103,9 @@
 		6B195F9829A2D03100C0F257 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				6B195F9929A2D03100C0F257 /* Memory.swift */,
-				6B195F9A29A2D03100C0F257 /* Schedule.swift */,
 				6B195F9B29A2D03100C0F257 /* Plan.swift */,
+				6B195F9A29A2D03100C0F257 /* Schedule.swift */,
+				6B195F9929A2D03100C0F257 /* Memory.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -133,8 +133,8 @@
 			children = (
 				6B195FA529A2D03100C0F257 /* UploadPlanUseCase.swift */,
 				6B195FAA29A2D03100C0F257 /* ReadPlansUseCase.swift */,
-				6B195FA629A2D03100C0F257 /* SwapPlansUseCase.swift */,
 				6B195FA929A2D03100C0F257 /* DeletePlanUseCase.swift */,
+				6B195FA629A2D03100C0F257 /* SwapPlansUseCase.swift */,
 				6B195FA829A2D03100C0F257 /* UploadMemoryUseCase.swift */,
 				6B195FAD29A2D03100C0F257 /* ReadMemoriesUseCase.swift */,
 				6B195FA429A2D03100C0F257 /* DeleteMemoryUseCase.swift */,
