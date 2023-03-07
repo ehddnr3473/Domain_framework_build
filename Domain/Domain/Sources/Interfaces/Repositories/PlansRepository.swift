@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol PlansRepository {
-    func upload(at index: Int, plan: Plan) async throws
+    func upload(key: String, plan: Plan) async throws
     func read() async throws -> [Plan]
-    func delete(at index: Int, plans: [Plan]) async throws
+    func delete(key: String, plans: [Plan]) async throws
 }

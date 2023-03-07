@@ -10,5 +10,5 @@ import Foundation
 public protocol MemoriesRepository {
     func upload(_ memory: Memory) async throws
     func read() async throws -> [Memory]
-    func delete(at index: Int) async throws
+    func delete(key: String) async throws
 }

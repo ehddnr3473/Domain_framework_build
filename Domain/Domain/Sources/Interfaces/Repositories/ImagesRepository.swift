@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public protocol ImagesRepository: AnyObject {
-    func upload(at index: Int, _ image: UIImage) async throws
-    func read(at index: Int, _ completion: @escaping ((Result<UIImage, Error>) -> Void))
-    func delete(at index: Int) async throws
+    func upload(key: String, _ image: UIImage) async throws
+    func read(key: String, _ completion: @escaping ((Result<UIImage, Error>) -> Void))
+    func delete(key: String) async throws
 }
