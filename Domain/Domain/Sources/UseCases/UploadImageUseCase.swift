@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public protocol UploadImageUseCase {
-    func execute(at index: Int, _ image: UIImage) async throws
+    func execute(key: String, _ image: UIImage) async throws
 }
 
 struct DefaultUploadImageUseCase: UploadImageUseCase {
@@ -19,7 +19,7 @@ struct DefaultUploadImageUseCase: UploadImageUseCase {
         self.repository = repository
     }
     
-    func execute(at index: Int, _ image: UIImage) async throws {
-        try await repository.upload(at: index, image)
+    func execute(key: String, _ image: UIImage) async throws {
+        try await repository.upload(key: key, image)
     }
 }

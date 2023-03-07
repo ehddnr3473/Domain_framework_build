@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol DeletePlanUseCase {
-    func execute(at index: Int, plans: [Plan]) async throws
+    func execute(key: String, plans: [Plan]) async throws
 }
 
 struct DefaultDeletePlanUseCase: DeletePlanUseCase {
@@ -18,7 +18,7 @@ struct DefaultDeletePlanUseCase: DeletePlanUseCase {
         self.repository = repository
     }
     
-    func execute(at index: Int, plans: [Plan]) async throws {
-        try await repository.delete(at: index, plans: plans)
+    func execute(key: String, plans: [Plan]) async throws {
+        try await repository.delete(key: key, plans: plans)
     }
 }

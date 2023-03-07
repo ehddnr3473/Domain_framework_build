@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol DeleteImageUseCase {
-    func execute(at index: Int) async throws
+    func execute(key: String) async throws
 }
 
 struct DefaultDeleteImageUseCase: DeleteImageUseCase {
@@ -18,7 +18,7 @@ struct DefaultDeleteImageUseCase: DeleteImageUseCase {
         self.repository = repository
     }
     
-    func execute(at index: Int) async throws {
-        try await repository.delete(at: index)
+    func execute(key: String) async throws {
+        try await repository.delete(key: key)
     }
 }

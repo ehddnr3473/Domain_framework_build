@@ -8,17 +8,17 @@
 import Foundation
 
 public struct SwapPlansBox {
-    public let source: Int
-    public let destination: Int
+    public let sourceKey: String
+    public let destinationKey: String
     public let sourcePlan: Plan
     public let destinationPlan: Plan
     
-    public init(source: Int,
-                destination: Int,
+    public init(sourceKey: String,
+                destinationKey: String,
                 sourcePlan: Plan,
                 destinationPlan: Plan) {
-        self.source = source
-        self.destination = destination
+        self.sourceKey = sourceKey
+        self.destinationKey = destinationKey
         self.sourcePlan = sourcePlan
         self.destinationPlan = destinationPlan
     }
@@ -39,14 +39,14 @@ struct DefaultSwapPlansUseCase: SwapPlansUseCase {
         try await withThrowingTaskGroup(of: Void.self) { taskGroup in // rethrows
             taskGroup.addTask { [self] in
                 try await repository.upload(
-                    at: swapPlansBox.source,
+                    key: swapPlansBox.sourceKey,
                     plan: swapPlansBox.destinationPlan
                 )
             }
             
             taskGroup.addTask { [self] in
                 try await repository.upload(
-                    at: swapPlansBox.destination,
+                    key: swapPlansBox.destinationKey,
                     plan: swapPlansBox.sourcePlan
                 )
             }

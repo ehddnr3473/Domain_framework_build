@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public protocol ReadImageUseCase {
-    func execute(at index: Int, completion: @escaping ((Result<UIImage, Error>) -> Void))
+    func execute(key: String, completion: @escaping ((Result<UIImage, Error>) -> Void))
 }
 
 struct DefaultReadImageUseCase: ReadImageUseCase {
@@ -19,7 +19,7 @@ struct DefaultReadImageUseCase: ReadImageUseCase {
         self.repository = repository
     }
     
-    func execute(at index: Int, completion: @escaping ((Result<UIImage, Error>) -> Void)) {
-        repository.read(at: index, completion)
+    func execute(key: String, completion: @escaping ((Result<UIImage, Error>) -> Void)) {
+        repository.read(key: key, completion)
     }
 }

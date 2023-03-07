@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol DeleteMemoryUseCase {
-    func execute(at index: Int) async throws
+    func execute(key: String) async throws
 }
 
 struct DefaultDeleteMemoryUseCase: DeleteMemoryUseCase {
@@ -18,7 +18,7 @@ struct DefaultDeleteMemoryUseCase: DeleteMemoryUseCase {
         self.repository = repository
     }
     
-    func execute(at index: Int) async throws {
-        try await repository.delete(at: index)
+    func execute(key: String) async throws {
+        try await repository.delete(key: key)
     }
 }
