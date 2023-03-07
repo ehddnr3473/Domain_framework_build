@@ -22,21 +22,21 @@ extension Domain.Schedule : Swift.Equatable {
 }
 public protocol PlansRepository {
   #if compiler(>=5.3) && $AsyncAwait
-  func upload(at index: Swift.Int, plan: Domain.Plan) async throws
+  func upload(key: Swift.String, plan: Domain.Plan) async throws
   #endif
   #if compiler(>=5.3) && $AsyncAwait
   func read() async throws -> [Domain.Plan]
   #endif
   #if compiler(>=5.3) && $AsyncAwait
-  func delete(at index: Swift.Int, plans: [Domain.Plan]) async throws
+  func delete(key: Swift.String, plans: [Domain.Plan]) async throws
   #endif
 }
 public struct SwapPlansBox {
-  public let source: Swift.Int
-  public let destination: Swift.Int
+  public let sourceKey: Swift.String
+  public let destinationKey: Swift.String
   public let sourcePlan: Domain.Plan
   public let destinationPlan: Domain.Plan
-  public init(source: Swift.Int, destination: Swift.Int, sourcePlan: Domain.Plan, destinationPlan: Domain.Plan)
+  public init(sourceKey: Swift.String, destinationKey: Swift.String, sourcePlan: Domain.Plan, destinationPlan: Domain.Plan)
 }
 public protocol SwapPlansUseCase {
   #if compiler(>=5.3) && $AsyncAwait
@@ -45,7 +45,7 @@ public protocol SwapPlansUseCase {
 }
 public protocol DeleteImageUseCase {
   #if compiler(>=5.3) && $AsyncAwait
-  func execute(at index: Swift.Int) async throws
+  func execute(key: Swift.String) async throws
   #endif
 }
 public protocol MemoriesRepository {
@@ -56,12 +56,12 @@ public protocol MemoriesRepository {
   func read() async throws -> [Domain.Memory]
   #endif
   #if compiler(>=5.3) && $AsyncAwait
-  func delete(at index: Swift.Int) async throws
+  func delete(key: Swift.String) async throws
   #endif
 }
 public protocol UploadImageUseCase {
   #if compiler(>=5.3) && $AsyncAwait
-  func execute(at index: Swift.Int, _ image: UIKit.UIImage) async throws
+  func execute(key: Swift.String, _ image: UIKit.UIImage) async throws
   #endif
 }
 public protocol UploadMemoryUseCase {
@@ -76,7 +76,7 @@ public protocol ReadPlansUseCase {
 }
 public protocol DeleteMemoryUseCase {
   #if compiler(>=5.3) && $AsyncAwait
-  func execute(at index: Swift.Int) async throws
+  func execute(key: Swift.String) async throws
   #endif
 }
 public protocol MemoriesUseCaseProvider {
@@ -91,7 +91,7 @@ public struct DefaultMemoriesUseCaseProvider : Domain.MemoriesUseCaseProvider {
   public func provideDeleteMemoryUseCase() -> Domain.DeleteMemoryUseCase
 }
 public protocol ReadImageUseCase {
-  func execute(at index: Swift.Int, completion: @escaping ((Swift.Result<UIKit.UIImage, Swift.Error>) -> Swift.Void))
+  func execute(key: Swift.String, completion: @escaping ((Swift.Result<UIKit.UIImage, Swift.Error>) -> Swift.Void))
 }
 public protocol ReadMemoriesUseCase {
   #if compiler(>=5.3) && $AsyncAwait
@@ -146,20 +146,20 @@ public struct DefaultPlansUseCaseProvider : Domain.PlansUseCaseProvider {
 }
 public protocol DeletePlanUseCase {
   #if compiler(>=5.3) && $AsyncAwait
-  func execute(at index: Swift.Int, plans: [Domain.Plan]) async throws
+  func execute(key: Swift.String, plans: [Domain.Plan]) async throws
   #endif
 }
 public protocol ImagesRepository : AnyObject {
   #if compiler(>=5.3) && $AsyncAwait
-  func upload(at index: Swift.Int, _ image: UIKit.UIImage) async throws
+  func upload(key: Swift.String, _ image: UIKit.UIImage) async throws
   #endif
-  func read(at index: Swift.Int, _ completion: @escaping ((Swift.Result<UIKit.UIImage, Swift.Error>) -> Swift.Void))
+  func read(key: Swift.String, _ completion: @escaping ((Swift.Result<UIKit.UIImage, Swift.Error>) -> Swift.Void))
   #if compiler(>=5.3) && $AsyncAwait
-  func delete(at index: Swift.Int) async throws
+  func delete(key: Swift.String) async throws
   #endif
 }
 public protocol UploadPlanUseCase {
   #if compiler(>=5.3) && $AsyncAwait
-  func execute(at index: Swift.Int, plan: Domain.Plan) async throws
+  func execute(key: Swift.String, plan: Domain.Plan) async throws
   #endif
 }
