@@ -36,22 +36,29 @@ struct DefaultSwapPlansUseCase: SwapPlansUseCase {
     }
     
     func execute(_ swapPlansBox: SwapPlansBox) async throws {
-        try await withThrowingTaskGroup(of: Void.self) { taskGroup in // rethrows
-            taskGroup.addTask { [self] in
-                try await repository.upload(
-                    key: swapPlansBox.sourceKey,
-                    plan: swapPlansBox.destinationPlan
-                )
-            }
-            
-            taskGroup.addTask { [self] in
-                try await repository.upload(
-                    key: swapPlansBox.destinationKey,
-                    plan: swapPlansBox.sourcePlan
-                )
-            }
-            
-            for try await _ in taskGroup { }
-        }
+        try await repository.swap(swapPlansBox)
+        // Migration to Repository
+        //        try await withT hrowingTaskGroup(of: Void.self) { taskGroup in // rethrows
+        //            taskGroup.addTask {
+        //                try await repository.delete(key: swapPlansBox.sourceKey)
+        //                try await repository.delete(key: swapPlansBox.destinationKey)
+        //            }
+        //
+        //            taskGroup.addTask { [self] in
+        //                try await repository.upload(
+        //                    key: swapPlansBox.sourceKey,
+        //                    plan: swapPlansBox.destinationPlan
+        //                )
+        //            }
+        //
+        //            taskGroup.addTask { [self] in
+        //                try await repository.upload(
+        //                    key: swapPlansBox.destinationKey,
+        //                    plan: swapPlansBox.sourcePlan
+        //                )
+        //            }
+        //
+        //            for try await _ in taskGroup { }
+        //        }
     }
 }
