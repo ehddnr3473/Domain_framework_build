@@ -11,7 +11,6 @@ public protocol PlansUseCaseProvider {
     func provideUploadPlanUseCase() -> UploadPlanUseCase
     func provideReadPlansUseCase() -> ReadPlansUseCase
     func provideDeletePlanUseCase() -> DeletePlanUseCase
-    func provideSwapPlansUseCase() -> SwapPlansUseCase
 }
 
 public struct DefaultPlansUseCaseProvider: PlansUseCaseProvider {
@@ -31,9 +30,5 @@ public struct DefaultPlansUseCaseProvider: PlansUseCaseProvider {
     
     public func provideDeletePlanUseCase() -> DeletePlanUseCase {
         DefaultDeletePlanUseCase(repository)
-    }
-    
-    public func provideSwapPlansUseCase() -> SwapPlansUseCase {
-        DefaultSwapPlansUseCase(repository)
     }
 }
