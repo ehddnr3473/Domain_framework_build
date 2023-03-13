@@ -22,25 +22,13 @@ extension Domain.Schedule : Swift.Equatable {
 }
 public protocol PlansRepository {
   #if compiler(>=5.3) && $AsyncAwait
-  func upload(key: Swift.String, plan: Domain.Plan) async throws
+  func upload(plan: Domain.Plan) async throws
   #endif
   #if compiler(>=5.3) && $AsyncAwait
   func read() async throws -> [Domain.Plan]
   #endif
   #if compiler(>=5.3) && $AsyncAwait
-  func delete(key: Swift.String, plans: [Domain.Plan]) async throws
-  #endif
-}
-public struct SwapPlansBox {
-  public let sourceKey: Swift.String
-  public let destinationKey: Swift.String
-  public let sourcePlan: Domain.Plan
-  public let destinationPlan: Domain.Plan
-  public init(sourceKey: Swift.String, destinationKey: Swift.String, sourcePlan: Domain.Plan, destinationPlan: Domain.Plan)
-}
-public protocol SwapPlansUseCase {
-  #if compiler(>=5.3) && $AsyncAwait
-  func execute(_ planSwapBox: Domain.SwapPlansBox) async throws
+  func delete(key: Swift.String) async throws
   #endif
 }
 public protocol DeleteImageUseCase {
@@ -102,7 +90,8 @@ public struct Plan {
   public let title: Swift.String
   public let description: Swift.String
   public let schedules: [Domain.Schedule]
-  public init(title: Swift.String, description: Swift.String, schedules: [Domain.Schedule])
+  public let updatedDate: Foundation.Date
+  public init(title: Swift.String, description: Swift.String, schedules: [Domain.Schedule], updatedDate: Foundation.Date)
 }
 extension Domain.Plan : Swift.Equatable {
   public static func == (lhs: Domain.Plan, rhs: Domain.Plan) -> Swift.Bool
@@ -135,18 +124,16 @@ public protocol PlansUseCaseProvider {
   func provideUploadPlanUseCase() -> Domain.UploadPlanUseCase
   func provideReadPlansUseCase() -> Domain.ReadPlansUseCase
   func provideDeletePlanUseCase() -> Domain.DeletePlanUseCase
-  func provideSwapPlansUseCase() -> Domain.SwapPlansUseCase
 }
 public struct DefaultPlansUseCaseProvider : Domain.PlansUseCaseProvider {
   public init(repository: Domain.PlansRepository)
   public func provideUploadPlanUseCase() -> Domain.UploadPlanUseCase
   public func provideReadPlansUseCase() -> Domain.ReadPlansUseCase
   public func provideDeletePlanUseCase() -> Domain.DeletePlanUseCase
-  public func provideSwapPlansUseCase() -> Domain.SwapPlansUseCase
 }
 public protocol DeletePlanUseCase {
   #if compiler(>=5.3) && $AsyncAwait
-  func execute(key: Swift.String, plans: [Domain.Plan]) async throws
+  func execute(key: Swift.String) async throws
   #endif
 }
 public protocol ImagesRepository : AnyObject {
@@ -160,6 +147,6 @@ public protocol ImagesRepository : AnyObject {
 }
 public protocol UploadPlanUseCase {
   #if compiler(>=5.3) && $AsyncAwait
-  func execute(key: Swift.String, plan: Domain.Plan) async throws
+  func execute(plan: Domain.Plan) async throws
   #endif
 }
