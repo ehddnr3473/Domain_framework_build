@@ -11,5 +11,4 @@ public protocol PlansRepository {
     func upload(plan: Plan) async throws
     func read() async throws -> [Plan]
     func delete(key: String) async throws
-    func swap(_ swapPlansBox: SwapPlansBox) async throws
 }
