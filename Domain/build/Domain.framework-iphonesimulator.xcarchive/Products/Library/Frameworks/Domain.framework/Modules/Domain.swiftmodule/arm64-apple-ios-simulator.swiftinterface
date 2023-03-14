@@ -21,9 +21,7 @@ extension Domain.Schedule : Swift.Equatable {
   public static func == (lhs: Domain.Schedule, rhs: Domain.Schedule) -> Swift.Bool
 }
 public protocol PlansRepository {
-  #if compiler(>=5.3) && $AsyncAwait
-  func upload(plan: Domain.Plan) async throws
-  #endif
+  func upload(plan: Domain.Plan) throws
   #if compiler(>=5.3) && $AsyncAwait
   func read() async throws -> [Domain.Plan]
   #endif
@@ -87,11 +85,12 @@ public protocol ReadMemoriesUseCase {
   #endif
 }
 public struct Plan {
-  public let title: Swift.String
+  public typealias Identifier = Swift.String
+  public let title: Domain.Plan.Identifier
   public let description: Swift.String
   public let schedules: [Domain.Schedule]
   public let updatedDate: Foundation.Date
-  public init(title: Swift.String, description: Swift.String, schedules: [Domain.Schedule], updatedDate: Foundation.Date)
+  public init(title: Domain.Plan.Identifier, description: Swift.String, schedules: [Domain.Schedule], updatedDate: Foundation.Date)
 }
 extension Domain.Plan : Swift.Equatable {
   public static func == (lhs: Domain.Plan, rhs: Domain.Plan) -> Swift.Bool
@@ -113,7 +112,7 @@ public struct Memory : Swift.Hashable {
   public let id: Domain.Memory.Identifier
   public let title: Swift.String
   public let uploadDate: Foundation.Date
-  public init(id: Swift.Int, title: Swift.String, uploadDate: Foundation.Date)
+  public init(id: Domain.Memory.Identifier, title: Swift.String, uploadDate: Foundation.Date)
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: Domain.Memory, b: Domain.Memory) -> Swift.Bool
   public var hashValue: Swift.Int {
