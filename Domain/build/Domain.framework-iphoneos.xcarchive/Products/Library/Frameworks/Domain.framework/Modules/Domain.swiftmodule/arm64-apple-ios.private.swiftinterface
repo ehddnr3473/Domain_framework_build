@@ -89,8 +89,7 @@ public struct Plan {
   public let title: Domain.Plan.Identifier
   public let description: Swift.String
   public let schedules: [Domain.Schedule]
-  public let updatedDate: Foundation.Date
-  public init(title: Domain.Plan.Identifier, description: Swift.String, schedules: [Domain.Schedule], updatedDate: Foundation.Date)
+  public init(title: Domain.Plan.Identifier, description: Swift.String, schedules: [Domain.Schedule])
 }
 extension Domain.Plan : Swift.Equatable {
   public static func == (lhs: Domain.Plan, rhs: Domain.Plan) -> Swift.Bool
