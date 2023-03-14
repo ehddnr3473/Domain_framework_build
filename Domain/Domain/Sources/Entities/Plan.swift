@@ -13,16 +13,13 @@ public struct Plan {
     public let title: Identifier
     public let description: String
     public let schedules: [Schedule]
-    public let updatedDate: Date
     
     public init(title: Identifier,
                 description: String,
-                schedules: [Schedule],
-                updatedDate: Date) {
+                schedules: [Schedule]) {
         self.title = title
         self.description = description
         self.schedules = schedules
-        self.updatedDate = updatedDate
     }
 }
 
