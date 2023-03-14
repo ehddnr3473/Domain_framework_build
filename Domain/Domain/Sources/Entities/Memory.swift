@@ -13,7 +13,7 @@ public struct Memory: Hashable {
     public let title: String
     public let uploadDate: Date
     
-    public init(id: Int, title: String, uploadDate: Date) {
+    public init(id: Identifier, title: String, uploadDate: Date) {
         self.id = id
         self.title = title
         self.uploadDate = uploadDate
