@@ -145,7 +145,5 @@ public protocol ImagesRepository : AnyObject {
   #endif
 }
 public protocol UploadPlanUseCase {
-  #if compiler(>=5.3) && $AsyncAwait
-  func execute(plan: Domain.Plan) async throws
-  #endif
+  func execute(plan: Domain.Plan) throws
 }

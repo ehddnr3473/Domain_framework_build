@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol UploadPlanUseCase {
-    func execute(plan: Plan) async throws
+    func execute(plan: Plan) throws
 }
 
 struct DefaultUploadPlanUseCase: UploadPlanUseCase {
@@ -18,7 +18,7 @@ struct DefaultUploadPlanUseCase: UploadPlanUseCase {
         self.repository = repository
     }
     
-    public func execute(plan: Plan) async throws {
-        try await repository.upload(plan: plan)
+    public func execute(plan: Plan) throws {
+        try repository.upload(plan: plan)
     }
 }
