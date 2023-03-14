@@ -9,12 +9,13 @@ import Foundation
 import CoreLocation
 
 public struct Plan {
-    public let title: String
+    public typealias Identifier = String
+    public let title: Identifier
     public let description: String
     public let schedules: [Schedule]
     public let updatedDate: Date
     
-    public init(title: String,
+    public init(title: Identifier,
                 description: String,
                 schedules: [Schedule],
                 updatedDate: Date) {
