@@ -18,7 +18,7 @@ public struct DefaultCoordinateUseCaseProvider : Domain.CoordinateUseCaseProvide
 }
 public protocol SearchCoordinateUseCase {
   #if compiler(>=5.3) && $AsyncAwait
-  func execute(query: Swift.String) async throws -> Domain.Coordinate
+  func execute(query: Domain.CoordinateQuery) async throws -> Domain.Coordinate
   #endif
 }
 public struct Schedule {
@@ -72,6 +72,10 @@ public protocol ReadPlansUseCase {
   func execute() async throws -> [Domain.Plan]
   #endif
 }
+public struct CoordinateQuery {
+  public let query: Swift.String
+  public init(query: Swift.String)
+}
 public protocol DeleteMemoryUseCase {
   #if compiler(>=5.3) && $AsyncAwait
   func execute(key: Swift.String) async throws
@@ -108,10 +112,13 @@ extension Domain.Plan : Swift.Equatable {
 }
 public protocol CoordinateRepository {
   #if compiler(>=5.3) && $AsyncAwait
-  func fetchCoordinate(query: Swift.String) async throws -> Domain.Coordinate
+  func fetchCoordinate(query: Domain.CoordinateQuery) async throws -> Domain.Coordinate
   #endif
 }
 public struct Coordinate {
+  public let latitude: Swift.Double
+  public let longitude: Swift.Double
+  public init(latitude: Swift.Double, longitude: Swift.Double)
 }
 public protocol ImagesUseCaseProvider : AnyObject {
   func provideUploadImageUseCase() -> Domain.UploadImageUseCase

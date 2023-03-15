@@ -149,14 +149,14 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "CoordinateQuery",
+                "printedName": "Domain.CoordinateQuery",
+                "usr": "s:6Domain15CoordinateQueryV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain23SearchCoordinateUseCaseP7execute5queryAA0C0VSS_tYaKF",
-            "mangledName": "$s6Domain23SearchCoordinateUseCaseP7execute5queryAA0C0VSS_tYaKF",
+            "usr": "s:6Domain23SearchCoordinateUseCaseP7execute5queryAA0C0VAA0C5QueryV_tYaKF",
+            "mangledName": "$s6Domain23SearchCoordinateUseCaseP7execute5queryAA0C0VAA0C5QueryV_tYaKF",
             "moduleName": "Domain",
             "genericSig": "<τ_0_0 where τ_0_0 : Domain.SearchCoordinateUseCase>",
             "sugared_genericSig": "<Self where Self : Domain.SearchCoordinateUseCase>",
@@ -1026,6 +1026,101 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "CoordinateQuery",
+        "printedName": "CoordinateQuery",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "query",
+            "printedName": "query",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Domain15CoordinateQueryV5querySSvp",
+            "mangledName": "$s6Domain15CoordinateQueryV5querySSvp",
+            "moduleName": "Domain",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Domain15CoordinateQueryV5querySSvg",
+                "mangledName": "$s6Domain15CoordinateQueryV5querySSvg",
+                "moduleName": "Domain",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(query:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CoordinateQuery",
+                "printedName": "Domain.CoordinateQuery",
+                "usr": "s:6Domain15CoordinateQueryV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Domain15CoordinateQueryV5queryACSS_tcfc",
+            "mangledName": "$s6Domain15CoordinateQueryV5queryACSS_tcfc",
+            "moduleName": "Domain",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:6Domain15CoordinateQueryV",
+        "mangledName": "$s6Domain15CoordinateQueryV",
+        "moduleName": "Domain",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Domain",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "DeleteMemoryUseCase",
         "printedName": "DeleteMemoryUseCase",
         "children": [
@@ -1712,14 +1807,14 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "CoordinateQuery",
+                "printedName": "Domain.CoordinateQuery",
+                "usr": "s:6Domain15CoordinateQueryV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Domain20CoordinateRepositoryP05fetchB05queryAA0B0VSS_tYaKF",
-            "mangledName": "$s6Domain20CoordinateRepositoryP05fetchB05queryAA0B0VSS_tYaKF",
+            "usr": "s:6Domain20CoordinateRepositoryP05fetchB05queryAA0B0VAA0B5QueryV_tYaKF",
+            "mangledName": "$s6Domain20CoordinateRepositoryP05fetchB05queryAA0B0VAA0B5QueryV_tYaKF",
             "moduleName": "Domain",
             "genericSig": "<τ_0_0 where τ_0_0 : Domain.CoordinateRepository>",
             "sugared_genericSig": "<Self where Self : Domain.CoordinateRepository>",
@@ -1751,6 +1846,129 @@
         "kind": "TypeDecl",
         "name": "Coordinate",
         "printedName": "Coordinate",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "latitude",
+            "printedName": "latitude",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Domain10CoordinateV8latitudeSdvp",
+            "mangledName": "$s6Domain10CoordinateV8latitudeSdvp",
+            "moduleName": "Domain",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Domain10CoordinateV8latitudeSdvg",
+                "mangledName": "$s6Domain10CoordinateV8latitudeSdvg",
+                "moduleName": "Domain",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "longitude",
+            "printedName": "longitude",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Domain10CoordinateV9longitudeSdvp",
+            "mangledName": "$s6Domain10CoordinateV9longitudeSdvp",
+            "moduleName": "Domain",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Domain10CoordinateV9longitudeSdvg",
+                "mangledName": "$s6Domain10CoordinateV9longitudeSdvg",
+                "moduleName": "Domain",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(latitude:longitude:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Coordinate",
+                "printedName": "Domain.Coordinate",
+                "usr": "s:6Domain10CoordinateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Domain10CoordinateV8latitude9longitudeACSd_Sdtcfc",
+            "mangledName": "$s6Domain10CoordinateV8latitude9longitudeACSd_Sdtcfc",
+            "moduleName": "Domain",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
         "declKind": "Struct",
         "usr": "s:6Domain10CoordinateV",
         "mangledName": "$s6Domain10CoordinateV",
