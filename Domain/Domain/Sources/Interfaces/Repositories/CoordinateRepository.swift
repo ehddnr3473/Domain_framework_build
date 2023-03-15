@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol CoordinateRepository {
-    func fetchCoordinate(query: String) async throws -> Coordinate
+    func fetchCoordinate(query: CoordinateQuery) async throws -> Coordinate
 }
