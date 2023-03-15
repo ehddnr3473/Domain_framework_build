@@ -15,6 +15,176 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "CoordinateUseCaseProvider",
+        "printedName": "CoordinateUseCaseProvider",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "provideSearchCoordinateUseCase",
+            "printedName": "provideSearchCoordinateUseCase()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SearchCoordinateUseCase",
+                "printedName": "Domain.SearchCoordinateUseCase",
+                "usr": "s:6Domain23SearchCoordinateUseCaseP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Domain25CoordinateUseCaseProviderP013provideSearchbcD0AA0gbcD0_pyF",
+            "mangledName": "$s6Domain25CoordinateUseCaseProviderP013provideSearchbcD0AA0gbcD0_pyF",
+            "moduleName": "Domain",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.CoordinateUseCaseProvider>",
+            "sugared_genericSig": "<Self where Self : Domain.CoordinateUseCaseProvider>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:6Domain25CoordinateUseCaseProviderP",
+        "mangledName": "$s6Domain25CoordinateUseCaseProviderP",
+        "moduleName": "Domain",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DefaultCoordinateUseCaseProvider",
+        "printedName": "DefaultCoordinateUseCaseProvider",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(repository:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultCoordinateUseCaseProvider",
+                "printedName": "Domain.DefaultCoordinateUseCaseProvider",
+                "usr": "s:6Domain32DefaultCoordinateUseCaseProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CoordinateRepository",
+                "printedName": "Domain.CoordinateRepository",
+                "usr": "s:6Domain20CoordinateRepositoryP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Domain32DefaultCoordinateUseCaseProviderV10repositoryAcA0C10Repository_p_tcfc",
+            "mangledName": "$s6Domain32DefaultCoordinateUseCaseProviderV10repositoryAcA0C10Repository_p_tcfc",
+            "moduleName": "Domain",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "provideSearchCoordinateUseCase",
+            "printedName": "provideSearchCoordinateUseCase()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SearchCoordinateUseCase",
+                "printedName": "Domain.SearchCoordinateUseCase",
+                "usr": "s:6Domain23SearchCoordinateUseCaseP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Domain32DefaultCoordinateUseCaseProviderV013provideSearchcdE0AA0hcdE0_pyF",
+            "mangledName": "$s6Domain32DefaultCoordinateUseCaseProviderV013provideSearchcdE0AA0hcdE0_pyF",
+            "moduleName": "Domain",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:6Domain32DefaultCoordinateUseCaseProviderV",
+        "mangledName": "$s6Domain32DefaultCoordinateUseCaseProviderV",
+        "moduleName": "Domain",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CoordinateUseCaseProvider",
+            "printedName": "CoordinateUseCaseProvider",
+            "usr": "s:6Domain25CoordinateUseCaseProviderP",
+            "mangledName": "$s6Domain25CoordinateUseCaseProviderP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Domain",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SearchCoordinateUseCase",
+        "printedName": "SearchCoordinateUseCase",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "execute",
+            "printedName": "execute(query:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Coordinate",
+                "printedName": "Domain.Coordinate",
+                "usr": "s:6Domain10CoordinateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Domain23SearchCoordinateUseCaseP7execute5queryAA0C0VSS_tYaKF",
+            "mangledName": "$s6Domain23SearchCoordinateUseCaseP7execute5queryAA0C0VSS_tYaKF",
+            "moduleName": "Domain",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.SearchCoordinateUseCase>",
+            "sugared_genericSig": "<Self where Self : Domain.SearchCoordinateUseCase>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:6Domain23SearchCoordinateUseCaseP",
+        "mangledName": "$s6Domain23SearchCoordinateUseCaseP",
+        "moduleName": "Domain",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Domain",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "CoreLocation",
         "printedName": "CoreLocation",
@@ -1512,6 +1682,81 @@
             "usr": "s:SQ",
             "mangledName": "$sSQ"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Domain",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CoordinateRepository",
+        "printedName": "CoordinateRepository",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "fetchCoordinate",
+            "printedName": "fetchCoordinate(query:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Coordinate",
+                "printedName": "Domain.Coordinate",
+                "usr": "s:6Domain10CoordinateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Domain20CoordinateRepositoryP05fetchB05queryAA0B0VSS_tYaKF",
+            "mangledName": "$s6Domain20CoordinateRepositoryP05fetchB05queryAA0B0VSS_tYaKF",
+            "moduleName": "Domain",
+            "genericSig": "<τ_0_0 where τ_0_0 : Domain.CoordinateRepository>",
+            "sugared_genericSig": "<Self where Self : Domain.CoordinateRepository>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:6Domain20CoordinateRepositoryP",
+        "mangledName": "$s6Domain20CoordinateRepositoryP",
+        "moduleName": "Domain",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Domain",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Coordinate",
+        "printedName": "Coordinate",
+        "declKind": "Struct",
+        "usr": "s:6Domain10CoordinateV",
+        "mangledName": "$s6Domain10CoordinateV",
+        "moduleName": "Domain",
+        "declAttributes": [
+          "AccessControl"
         ]
       },
       {

@@ -9,6 +9,18 @@ import Swift
 import UIKit
 import _Concurrency
 import _StringProcessing
+public protocol CoordinateUseCaseProvider {
+  func provideSearchCoordinateUseCase() -> Domain.SearchCoordinateUseCase
+}
+public struct DefaultCoordinateUseCaseProvider : Domain.CoordinateUseCaseProvider {
+  public init(repository: Domain.CoordinateRepository)
+  public func provideSearchCoordinateUseCase() -> Domain.SearchCoordinateUseCase
+}
+public protocol SearchCoordinateUseCase {
+  #if compiler(>=5.3) && $AsyncAwait
+  func execute(query: Swift.String) async throws -> Domain.Coordinate
+  #endif
+}
 public struct Schedule {
   public let title: Swift.String
   public let description: Swift.String
@@ -93,6 +105,13 @@ public struct Plan {
 }
 extension Domain.Plan : Swift.Equatable {
   public static func == (lhs: Domain.Plan, rhs: Domain.Plan) -> Swift.Bool
+}
+public protocol CoordinateRepository {
+  #if compiler(>=5.3) && $AsyncAwait
+  func fetchCoordinate(query: Swift.String) async throws -> Domain.Coordinate
+  #endif
+}
+public struct Coordinate {
 }
 public protocol ImagesUseCaseProvider : AnyObject {
   func provideUploadImageUseCase() -> Domain.UploadImageUseCase
