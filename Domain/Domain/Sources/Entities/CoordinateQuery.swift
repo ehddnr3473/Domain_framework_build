@@ -8,5 +8,9 @@
 import Foundation
 
 public struct CoordinateQuery {
-    let query: String
+    public let query: String
+    
+    public init(query: String) {
+        self.query = query
+    }
 }
