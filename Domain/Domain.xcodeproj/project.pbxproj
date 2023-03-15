@@ -29,6 +29,7 @@
 		6B87EE1B29C0E81F003D64C0 /* SearchCoordinateUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87EE1A29C0E81F003D64C0 /* SearchCoordinateUseCase.swift */; };
 		6B87EE1D29C0E933003D64C0 /* CoordinateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87EE1C29C0E933003D64C0 /* CoordinateRepository.swift */; };
 		6B87EE1F29C0EA3C003D64C0 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87EE1E29C0EA3C003D64C0 /* Coordinate.swift */; };
+		6B87EE2229C14A7A003D64C0 /* CoordinateUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87EE2129C14A7A003D64C0 /* CoordinateUseCaseProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		6B87EE1A29C0E81F003D64C0 /* SearchCoordinateUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinateUseCase.swift; sourceTree = "<group>"; };
 		6B87EE1C29C0E933003D64C0 /* CoordinateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateRepository.swift; sourceTree = "<group>"; };
 		6B87EE1E29C0EA3C003D64C0 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		6B87EE2129C14A7A003D64C0 /* CoordinateUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateUseCaseProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				6B195F9E29A2D03100C0F257 /* PlansUseCaseProvider.swift */,
 				6B195F9F29A2D03100C0F257 /* MemoriesUseCaseProvider.swift */,
 				6B195F9D29A2D03100C0F257 /* ImagesUseCaseProvider.swift */,
+				6B87EE2129C14A7A003D64C0 /* CoordinateUseCaseProvider.swift */,
 			);
 			path = UseCaseProvider;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B87EE2229C14A7A003D64C0 /* CoordinateUseCaseProvider.swift in Sources */,
 				6B87EE1B29C0E81F003D64C0 /* SearchCoordinateUseCase.swift in Sources */,
 				6B195FAF29A2D03100C0F257 /* Schedule.swift in Sources */,
 				6B195FB429A2D03100C0F257 /* PlansRepository.swift in Sources */,
