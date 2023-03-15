@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol SearchCoordinateUseCase {
-    func execute(query: String) async throws -> Coordinate
+    func execute(query: CoordinateQuery) async throws -> Coordinate
 }
 
 struct DefaultSearchCoordinateUseCase: SearchCoordinateUseCase {
@@ -18,7 +18,7 @@ struct DefaultSearchCoordinateUseCase: SearchCoordinateUseCase {
         self.repository = repository
     }
     
-    func execute(query: String) async throws -> Coordinate {
+    func execute(query: CoordinateQuery) async throws -> Coordinate {
         try await repository.fetchCoordinate(query: query)
     }
 }
