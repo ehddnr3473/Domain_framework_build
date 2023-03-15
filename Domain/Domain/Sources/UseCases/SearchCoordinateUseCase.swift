@@ -11,10 +11,14 @@ public protocol SearchCoordinateUseCase {
     func execute(query: String) async throws -> Coordinate
 }
 
-public struct DefaultSearchCoordinateUseCase: SearchCoordinateUseCase {
+struct DefaultSearchCoordinateUseCase: SearchCoordinateUseCase {
     private let repository: CoordinateRepository
     
-    public func execute(query: String) async throws -> Coordinate {
+    init(_ repository: CoordinateRepository) {
+        self.repository = repository
+    }
+    
+    func execute(query: String) async throws -> Coordinate {
         try await repository.fetchCoordinate(query: query)
     }
 }
